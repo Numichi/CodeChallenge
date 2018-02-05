@@ -3,8 +3,10 @@ package medium.addTwoNumbers;
 
 //import org.jetbrains.annotations.Contract;
 
-class Solution {
-    public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
+class Solution
+{
+    public ListNode addTwoNumbers(ListNode l1, ListNode l2)
+    {
         ListNode startHelper = new ListNode(0);
         ListNode current = startHelper;
 
@@ -13,7 +15,7 @@ class Solution {
         int b;
         int sum;
 
-        while (l1 != null || l2 != null) {
+        while(l1 != null || l2 != null) {
             a = (l1 != null) ? l1.val : 0;
             b = (l2 != null) ? l2.val : 0;
 
@@ -26,7 +28,7 @@ class Solution {
             l2 = this.next(l2);
         }
 
-        if (carry > 0) {
+        if(carry > 0) {
             current.next = new ListNode(carry);
         }
 
@@ -34,8 +36,9 @@ class Solution {
     }
 
     //@Contract(value = "null -> null", pure = true)
-    private ListNode next(ListNode node) {
-        if (node != null) {
+    private ListNode next(ListNode node)
+    {
+        if(node != null) {
             return node.next;
         }
 

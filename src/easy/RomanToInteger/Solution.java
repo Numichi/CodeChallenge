@@ -3,11 +3,12 @@ package easy.RomanToInteger;
 import java.util.HashMap;
 import java.util.Map;
 
-class Solution {
-
+class Solution
+{
     private Map<Character, Integer> symbol = new HashMap<>();
 
-    public Solution() {
+    public Solution()
+    {
         this.symbol.put('I', 1);
         this.symbol.put('V', 5);
         this.symbol.put('X', 10);
@@ -17,7 +18,8 @@ class Solution {
         this.symbol.put('M', 1000);
     }
 
-    public int romanToInt(String s) {
+    public int romanToInt(String s)
+    {
         int current = 0;
         int size = s.length();
 
@@ -25,8 +27,8 @@ class Solution {
         char cSymbol;
         int iNext;
         int iSymbol;
-        for (int i = 0; i < size; i++) {
-            if (i < size - 1) {
+        for(int i = 0; i < size; i++) {
+            if(i < size - 1) {
                 cNext = s.charAt(i + 1);
                 iNext = this.symbol.get(cNext);
             } else {
@@ -36,7 +38,7 @@ class Solution {
             cSymbol = s.charAt(i);
             iSymbol = this.symbol.get(cSymbol);
 
-            if (iSymbol < iNext) {
+            if(iSymbol < iNext) {
                 current -= iSymbol;
                 iSymbol = iNext;
                 i++;
@@ -44,7 +46,6 @@ class Solution {
 
             current += iSymbol;
         }
-
 
         return current;
     }
