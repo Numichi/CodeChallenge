@@ -46,19 +46,7 @@ public class Solution
 
     private void search() throws CantCutException
     {
-        Set<String> set = new HashSet<>();
-        boolean cut = true;
-
-        for(String value : this.strArr) {
-            set.add(value.substring(0, this.c1));
-
-            if(1 < set.size()) {
-                cut = false;
-                break;
-            }
-        }
-
-        this.cut(cut);
+        this.cut(this.isOk(this.c1));
         this.search();
     }
 
@@ -93,9 +81,7 @@ public class Solution
         Set<String> set = new HashSet<>();
 
         for(String value : this.strArr) {
-            value = (length == null) ? value : value.substring(0, length);
-
-            set.add(value);
+            set.add((length == null) ? value : value.substring(0, length));
 
             if(1 < set.size()) {
                 return false;
