@@ -3,7 +3,7 @@ package easy.RomanToInteger;
 import java.util.HashMap;
 import java.util.Map;
 
-class Solution
+public class Solution
 {
     private Map<Character, Integer> symbol = new HashMap<>();
 

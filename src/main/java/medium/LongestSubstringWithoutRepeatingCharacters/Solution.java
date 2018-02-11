@@ -4,7 +4,7 @@ package medium.LongestSubstringWithoutRepeatingCharacters;
 import java.util.HashSet;
 import java.util.Set;
 
-class Solution
+public class Solution
 {
     public static void main(String[] arg)
     {

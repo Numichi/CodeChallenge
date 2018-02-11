@@ -1,5 +1,4 @@
-.idea
-out
-LeetCode.iml
-
-/src/Test.java
+/.idea
+/out
+/target
+/lib

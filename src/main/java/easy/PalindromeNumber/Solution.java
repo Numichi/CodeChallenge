@@ -1,8 +1,6 @@
 package easy.PalindromeNumber;
 
-import java.util.List;
-
-class Solution
+public class Solution
 {
     public boolean isPalindrome(int x)
     {

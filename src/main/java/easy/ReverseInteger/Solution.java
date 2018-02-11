@@ -1,11 +1,11 @@
 package easy.ReverseInteger;
 
-class Solution
+public class Solution
 {
     public int reverse(int x)
     {
         boolean negative = false;
-        boolean first = true;
+        boolean notFirst = false;
         long reverse = 0L;
 
         if(x < 0) {
@@ -14,9 +14,10 @@ class Solution
         }
 
         while(0 < x) {
-            if(first) {
+            if(notFirst) {
                 reverse *= 10;
-                first = false;
+            } else {
+                notFirst = true;
             }
 
             reverse += x % 10;
