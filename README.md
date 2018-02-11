@@ -3,6 +3,8 @@ Self-training
 
 [LeetCode](https://leetcode.com/problemset/all/)
 
+I have written solutions. I can not guarantee my solutions are the most optimal.
+
 Easy problems
 -------------
 
