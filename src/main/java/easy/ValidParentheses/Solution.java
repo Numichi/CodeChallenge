@@ -21,22 +21,28 @@ public class Solution
         this.stack.clear();
         
         for(char c : s.toCharArray()) {
-            if(push.contains(c)) {
-                this.stack.push(c);
-            } else if(!this.pop(c)) {
+            if(!this.process(c)) {
                 return false;
             }
         }
         
-        return this.stack.size() == 0;
+        return this.stack.isEmpty();
     }
     
-    private boolean pop(char c)
+    private boolean process(char c)
     {
-        if(this.stack.size() == 0) {
+        // PUSH '(', '[', '{'
+        if(this.push.contains(c)) {
+            this.stack.push(c);
+            return true;
+        }
+        
+        // stack is empty -> syntax problem
+        if(this.stack.isEmpty()) {
             return false;
         }
         
+        // expect character
         switch(this.stack.pop()) {
             case '(':
                 return c == ')';
