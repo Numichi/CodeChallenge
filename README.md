@@ -14,7 +14,7 @@ Easy problems
 - [20. Valid Parentheses](https://leetcode.com/problems/valid-parentheses/description/)
 - [21. Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/description/)
 - [26. Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/description/)
-- [27. Remove Element](https://leetcode.com/problems/remove-element/description/) *Edit: be stay ordered array and don't modify array length*
+- [27. Remove Element](https://leetcode.com/problems/remove-element/description/) *(be stay ordered array and don't modify array length)*
 
 Medium problems
 ---------------
@@ -27,4 +27,4 @@ Medium problems
 Hard problems
 ---------------
 
-- [4. Median of Two Sorted Arrays](https://leetcode.com/problems/median-of-two-sorted-arrays/description/) *Comment: It is easy... ^^*
+- [4. Median of Two Sorted Arrays](https://leetcode.com/problems/median-of-two-sorted-arrays/description/) *(it was easy... ^^)*
