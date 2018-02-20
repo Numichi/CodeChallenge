@@ -1,14 +1,14 @@
-package medium.LongestSubstringWithoutRepeatingCharacters;
+package medium;
 
 
 import java.util.HashSet;
 import java.util.Set;
 
-public class Solution
+public class LongestSubstringWithoutRepeatingCharacters
 {
     public static void main(String[] arg)
     {
-        Solution task = new Solution();
+        LongestSubstringWithoutRepeatingCharacters task = new LongestSubstringWithoutRepeatingCharacters();
 
         System.out.println(task.lengthOfLongestSubstring("abcabcbb") == 3);
         System.out.println(task.getSubstr().equals("abc"));

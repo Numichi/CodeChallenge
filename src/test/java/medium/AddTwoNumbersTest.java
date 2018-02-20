@@ -1,6 +1,5 @@
 package medium;
 
-import medium.AddTwoNumbers.Solution;
 import services.ListNode;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -10,7 +9,7 @@ public class AddTwoNumbersTest
     @Test
     public void test()
     {
-        Solution s = new Solution();
+        AddTwoNumbers s = new AddTwoNumbers();
         ListNode<Integer> ln = new ListNode<>();
         
         Assert.assertTrue(ln.check(s.addTwoNumbers(ln.factory(1, 2, 3), ln.factory(1, 2, 3)),

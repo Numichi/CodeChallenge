@@ -1,9 +1,9 @@
-package medium.StringtoInteger;
+package medium;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class Solution
+public class StringtoInteger
 {
     public int myAtoi(String str)
     {

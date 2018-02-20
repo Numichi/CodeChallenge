@@ -1,6 +1,5 @@
 package medium;
 
-import medium.StringtoInteger.Solution;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -9,7 +8,7 @@ public class StringtoIntegerTest
     @Test
     public void test()
     {
-        Solution s = new Solution();
+        StringtoInteger s = new StringtoInteger();
         Assert.assertEquals(s.myAtoi("+-2"), 0);
         Assert.assertEquals(s.myAtoi("2147483648"), Integer.MAX_VALUE);
         Assert.assertEquals(s.myAtoi("-2147483649"), Integer.MIN_VALUE);

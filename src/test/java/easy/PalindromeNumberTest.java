@@ -1,6 +1,5 @@
 package easy;
 
-import easy.PalindromeNumber.Solution;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -16,7 +15,7 @@ public class PalindromeNumberTest
             {1, true},
         };
 
-        Solution s = new Solution();
+        PalindromeNumber s = new PalindromeNumber();
         for(Object[] item : arr) {
             Assert.assertEquals(
                 s.isPalindrome((int) item[0]),

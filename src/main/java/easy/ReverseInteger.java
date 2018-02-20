@@ -1,6 +1,6 @@
-package easy.ReverseInteger;
+package easy;
 
-public class Solution
+public class ReverseInteger
 {
     public int reverse(int x)
     {

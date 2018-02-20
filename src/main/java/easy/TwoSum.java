@@ -1,6 +1,6 @@
-package easy.TwoSum;
+package easy;
 
-public class Solution
+public class TwoSum
 {
     public int[] twoSum(int[] nums, int target)
     {

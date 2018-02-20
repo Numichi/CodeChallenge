@@ -1,9 +1,11 @@
-package easy.LongestCommonPrefix;
+package easy;
+
+import easy.exceptions.CantCutException;
 
 import java.util.HashSet;
 import java.util.Set;
 
-public class Solution
+public class LongestCommonPrefix
 {
     private String[] strArr;
 

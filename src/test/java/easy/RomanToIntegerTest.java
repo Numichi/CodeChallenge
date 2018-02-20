@@ -1,6 +1,5 @@
 package easy;
 
-import easy.RomanToInteger.Solution;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -20,7 +19,7 @@ public class RomanToIntegerTest
             {"MMCMLXXI", 2971},
         };
 
-        Solution s = new Solution();
+        RomanToInteger s = new RomanToInteger();
         for(Object[] item : arr) {
             Assert.assertEquals(
                 s.romanToInt((String) item[0]),

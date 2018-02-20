@@ -1,13 +1,13 @@
-package easy.RomanToInteger;
+package easy;
 
 import java.util.HashMap;
 import java.util.Map;
 
-public class Solution
+public class RomanToInteger
 {
     private Map<Character, Integer> symbol = new HashMap<>();
 
-    public Solution()
+    public RomanToInteger()
     {
         this.symbol.put('I', 1);
         this.symbol.put('V', 5);

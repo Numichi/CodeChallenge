@@ -1,6 +1,6 @@
-package easy.PalindromeNumber;
+package easy;
 
-public class Solution
+public class PalindromeNumber
 {
     public boolean isPalindrome(int x)
     {

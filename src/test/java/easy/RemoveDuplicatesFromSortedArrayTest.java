@@ -1,6 +1,5 @@
 package easy;
 
-import easy.RemoveDuplicatesFromSortedArray.Solution;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -8,12 +7,12 @@ import java.util.Arrays;
 
 public class RemoveDuplicatesFromSortedArrayTest
 {
-    private Solution s;
+    private RemoveDuplicatesFromSortedArray s;
     
     @Test
     public void test()
     {
-        this.s = new Solution();
+        this.s = new RemoveDuplicatesFromSortedArray();
         
         this.item(new int[]{1, 1, 2}, 2, new int[]{1, 2});
         this.item(new int[]{1, 1, 2, 3}, 3, new int[]{1, 2, 3});

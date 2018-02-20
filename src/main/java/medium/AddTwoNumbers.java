@@ -1,10 +1,10 @@
-package medium.AddTwoNumbers;
+package medium;
 
 //import org.jetbrains.annotations.Contract;
 
 import services.ListNode;
 
-public class Solution
+public class AddTwoNumbers
 {
     public ListNode<Integer> addTwoNumbers(ListNode<Integer> l1, ListNode<Integer> l2)
     {

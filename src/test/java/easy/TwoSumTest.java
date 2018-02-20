@@ -1,6 +1,5 @@
 package easy;
 
-import easy.TwoSum.Solution;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -18,7 +17,7 @@ public class TwoSumTest
                 new Model().setArr(0).setTarget(0).setExcept(0, 0),
         };
         
-        Solution s = new Solution();
+        TwoSum s = new TwoSum();
         for(Model item : models) {
             int[] result = s.twoSum(item.getArr(), item.getTarget());
             Assert.assertEquals(result, item.getExcept(), item.toString() + "$" + Arrays.toString(result));

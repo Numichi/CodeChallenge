@@ -1,6 +1,6 @@
-package easy.RemoveElement;
+package easy;
 
-public class Solution
+public class RemoveElement
 {
     public int[] nums; // to test
     

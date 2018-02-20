@@ -1,6 +1,5 @@
 package easy;
 
-import easy.LongestCommonPrefix.Solution;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -26,7 +25,7 @@ public class LongestCommonPrefixTest
             "aa",
         };
 
-        Solution s = new Solution();
+        LongestCommonPrefix s = new LongestCommonPrefix();
         for(int i = 0; i < a.length; i++) {
             Assert.assertEquals(s.longestCommonPrefix(q[i]), a[i]);
         }

@@ -1,10 +1,6 @@
 package easy;
 
-import easy.RemoveElement.Solution;
 import org.testng.Assert;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 import java.util.Arrays;
 
@@ -13,7 +9,7 @@ public class RemoveElementTest
     @Test
     public void testMy()
     {
-        Solution s = new Solution();
+        RemoveElement s = new RemoveElement();
         int result;
         
         // Input: [3, 3] (5)

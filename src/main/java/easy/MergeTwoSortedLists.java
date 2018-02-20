@@ -1,4 +1,4 @@
-package easy.MergeTwoSortedLists;
+package easy;
 
 //import org.jetbrains.annotations.Contract;
 
@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class Solution
+public class MergeTwoSortedLists
 {
     public ListNode<Integer> mergeTwoLists(ListNode<Integer> l1, ListNode<Integer> l2) {
         List<Integer> list = new ArrayList<>();

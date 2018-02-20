@@ -1,6 +1,5 @@
 package easy;
 
-import easy.MergeTwoSortedLists.Solution;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import services.ListNode;
@@ -10,7 +9,7 @@ public class MergeTwoSortedListsTest
     @Test
     public void test()
     {
-        Solution s = new Solution();
+        MergeTwoSortedLists s = new MergeTwoSortedLists();
         ListNode<Integer> LinkedList1 = new ListNode<>();
         ListNode<Integer> LinkedList2;
         ListNode<Integer> LinkedListExpect;

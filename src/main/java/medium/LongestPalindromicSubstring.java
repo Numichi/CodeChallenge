@@ -1,6 +1,6 @@
-package medium.LongestPalindromicSubstring;
+package medium;
 
-public class Solution
+public class LongestPalindromicSubstring
 {
     private String found  = "";
     private String string = "";

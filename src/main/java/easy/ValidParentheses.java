@@ -1,15 +1,15 @@
-package easy.ValidParentheses;
+package easy;
 
 import java.util.HashSet;
 import java.util.Set;
 import java.util.Stack;
 
-public class Solution
+public class ValidParentheses
 {
     private Set<Character>   push  = new HashSet<>();
     private Stack<Character> stack = new Stack<>();
     
-    public Solution()
+    public ValidParentheses()
     {
         push.add('[');
         push.add('(');

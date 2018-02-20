@@ -1,4 +1,4 @@
-package easy.LongestCommonPrefix;
+package easy.exceptions;
 
 public class CantCutException extends Throwable
 {

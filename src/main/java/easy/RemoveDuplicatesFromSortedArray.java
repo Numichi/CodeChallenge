@@ -1,6 +1,6 @@
-package easy.RemoveDuplicatesFromSortedArray;
+package easy;
 
-public class Solution
+public class RemoveDuplicatesFromSortedArray
 {
     public int[] nums;
     
