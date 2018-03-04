@@ -27,15 +27,31 @@ public class ListNode<T>
         return var1.next;
     }
     
+    public boolean checkNullable(ListNode<T> var1, ListNode<T> var2)
+    {
+        return checkNullable(var1, var2, true);
+    }
+    
+    public boolean checkNullable(ListNode<T> var1, ListNode<T> var2, boolean lookValue)
+    {
+        return var1 == null && var2 == null || check(var1, var2, lookValue);
+    }
+    
     public boolean check(ListNode<T> var1, ListNode<T> var2)
+    {
+        return check(var1, var2, true);
+    }
+    
+    public boolean check(ListNode<T> var1, ListNode<T> var2, boolean lookValue)
     {
         ListNode<T> temp1;
         ListNode<T> temp2;
         
-        while(var1 != null && var2 != null && var1.val == var2.val) {
+        while(var1 != null && var2 != null && (!lookValue || var1.val == var2.val)) {
             temp1 = var1.next;
             temp2 = var2.next;
             
+            // XOR
             if((temp1 == null && temp2 != null) || (temp1 != null && temp2 == null)) {
                 return false;
             }
