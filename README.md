@@ -25,6 +25,7 @@ Medium problems
 - [8. String to Integer (atoi)](https://leetcode.com/problems/string-to-integer-atoi/description/)
 - [11. Container With Most Water](https://leetcode.com/problems/container-with-most-water/description/)
 - [12. Integer to Roman](https://leetcode.com/problems/integer-to-roman/description/)
+- [17. Letter Combinations of a Phone Number](https://leetcode.com/problems/letter-combinations-of-a-phone-number/description/)
 
 Hard problems
 ---------------
