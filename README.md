@@ -1,5 +1,4 @@
 [![Build Status](https://travis-ci.org/Numichi/CodeChallenge.svg?branch=master)](https://travis-ci.org/Numichi/CodeChallenge)
-I'm trying to configure TravisCI. :)
 
 # Interviews
 I was some companies in an interview and I got programming tasks. I try reproduce those here.
