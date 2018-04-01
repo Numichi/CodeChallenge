@@ -1,10 +1,6 @@
-Self-training
-=============
+## LeetCode [website](https://leetcode.com/problemset/all/)
 
-[LeetCode](https://leetcode.com/problemset/all/)
-
-Easy problems
--------------
+### Easy problems
 
 - [1. Two Sum](https://leetcode.com/problems/two-sum/description/)
 - [7. Reverse Integer](https://leetcode.com/problems/reverse-integer/description/)
@@ -16,8 +12,7 @@ Easy problems
 - [26. Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/description/)
 - [27. Remove Element](https://leetcode.com/problems/remove-element/description/) *(be stay ordered array and don't modify array length)*
 
-Medium problems
----------------
+### Medium problems
 
 - [2. Add Two Numbers](https://leetcode.com/problems/add-two-numbers/description/)
 - [3. Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/description/)
@@ -28,7 +23,6 @@ Medium problems
 - [17. Letter Combinations of a Phone Number](https://leetcode.com/problems/letter-combinations-of-a-phone-number/description/)
 - [19. Remove Nth Node From End of List](https://leetcode.com/problems/remove-nth-node-from-end-of-list/description/)
 
-Hard problems
----------------
+### Hard problems
 
 - [4. Median of Two Sorted Arrays](https://leetcode.com/problems/median-of-two-sorted-arrays/description/) *(it was LeetCode.easy... ^^)*
