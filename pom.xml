@@ -4,8 +4,8 @@
 
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>hu.numichi.github.leetcode</groupId>
-    <artifactId>numichi-leetcode</artifactId>
+    <groupId>hu.numichi.github.codechallenge</groupId>
+    <artifactId>numichi-codechallenge</artifactId>
     <version>0</version>
     <packaging>jar</packaging>
     <name>Numichi Code Challenge</name>
