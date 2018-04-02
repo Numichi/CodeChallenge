@@ -38,7 +38,7 @@ Skeleton structure was exist.
 
 # Environments
 - **OS:** ArchLinux
-- **IDE:** I use IntelliJ IDEA Ultimate (personal license)
+- **IDE:** IntelliJ IDEA Ultimate Edition (personal license)
 - **JDK:** OpenJDK 9
 
 ```
