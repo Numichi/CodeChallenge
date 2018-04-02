@@ -38,157 +38,77 @@ Skeleton structure was exist.
 
 # Tree
 ```
-.
-├── CodeChallenge.iml
-├── pom.xml
-├── README.md
-├── src
-│   ├── main
-│   │   └── java
-│   │       ├── interviews
-│   │       │   ├── epam
-│   │       │   │   └── Task.java
-│   │       │   └── tigra
-│   │       │       ├── AbstractListNode.java
-│   │       │       ├── DoubleLinkedList.java
-│   │       │       ├── DoubleLinkedListNode.java
-│   │       │       ├── IList.java
-│   │       │       ├── IListNode.java
-│   │       │       ├── NoRefLinkedList.java
-│   │       │       ├── NoRefLinkedListNode.java
-│   │       │       ├── SingleLinkedList.java
-│   │       │       └── SingleLinkedListNode.java
-│   │       ├── leetcode
-│   │       │   ├── easy
-│   │       │   │   ├── exceptions
-│   │       │   │   │   └── CantCutException.java
-│   │       │   │   ├── LongestCommonPrefix.java
-│   │       │   │   ├── MergeTwoSortedLists.java
-│   │       │   │   ├── PalindromeNumber.java
-│   │       │   │   ├── RemoveDuplicatesFromSortedArray.java
-│   │       │   │   ├── RemoveElement.java
-│   │       │   │   ├── ReverseInteger.java
-│   │       │   │   ├── RomanToInteger.java
-│   │       │   │   ├── TwoSum.java
-│   │       │   │   └── ValidParentheses.java
-│   │       │   ├── hard
-│   │       │   │   └── MediaOofTwoSortedArrays.java
-│   │       │   └── medium
-│   │       │       ├── AddTwoNumbers.java
-│   │       │       ├── ContainerWithMostWater.java
-│   │       │       ├── IntegerToRoman.java
-│   │       │       ├── LetterCombinationsOfAPhoneNumber.java
-│   │       │       ├── LongestPalindromicSubstring.java
-│   │       │       ├── LongestSubstringWithoutRepeatingCharacters.java
-│   │       │       ├── RemoveNthNodeFromEndOfList.java
-│   │       │       └── StringtoInteger.java
-│   │       └── utils
-│   │           └── ListNode.java
-│   └── test
-│       └── java
-│           ├── interviews
-│           │   ├── epam
-│           │   │   └── TaskTest.java
-│           │   └── tigra
-│           │       └── TaskTest.java
-│           └── leetcode
-│               ├── easy
-│               │   ├── LongestCommonPrefixTest.java
-│               │   ├── MergeTwoSortedListsTest.java
-│               │   ├── PalindromeNumberTest.java
-│               │   ├── RemoveDuplicatesFromSortedArrayTest.java
-│               │   ├── RemoveElementTest.java
-│               │   ├── ReverseIntegerTest.java
-│               │   ├── RomanToIntegerTest.java
-│               │   ├── TwoSumTest.java
-│               │   └── ValidParenthesesTest.java
-│               ├── hard
-│               │   └── MediaOofTwoSortedArraysTest.java
-│               └── medium
-│                   ├── AddTwoNumbersTest.java
-│                   ├── ContainerWithMostWaterTest.java
-│                   ├── IntegerToRomanTest.java
-│                   ├── LetterCombinationsOfAPhoneNumberTest.java
-│                   ├── LongestPalindromicSubstringTest.java
-│                   ├── LongestSubstringWithoutRepeatingCharactersTest.java
-│                   ├── RemoveNthNodeFromEndOfListTest.java
-│                   └── StringtoIntegerTest.java
-└── target
-    ├── classes
-    │   ├── interviews
-    │   │   ├── epam
-    │   │   │   └── Task.class
-    │   │   └── tigra
-    │   │       ├── AbstractListNode.class
-    │   │       ├── DoubleLinkedList.class
-    │   │       ├── DoubleLinkedListNode.class
-    │   │       ├── IList.class
-    │   │       ├── IListNode.class
-    │   │       ├── NoRefLinkedList.class
-    │   │       ├── NoRefLinkedListNode.class
-    │   │       ├── SingleLinkedList.class
-    │   │       └── SingleLinkedListNode.class
-    │   ├── leetcode
-    │   │   ├── easy
-    │   │   │   ├── exceptions
-    │   │   │   │   └── CantCutException.class
-    │   │   │   ├── LongestCommonPrefix.class
-    │   │   │   ├── MergeTwoSortedLists.class
-    │   │   │   ├── PalindromeNumber.class
-    │   │   │   ├── RemoveDuplicatesFromSortedArray.class
-    │   │   │   ├── RemoveElement.class
-    │   │   │   ├── ReverseInteger.class
-    │   │   │   ├── RomanToInteger.class
-    │   │   │   ├── TwoSum.class
-    │   │   │   └── ValidParentheses.class
-    │   │   ├── hard
-    │   │   │   └── MediaOofTwoSortedArrays.class
-    │   │   └── medium
-    │   │       ├── AddTwoNumbers.class
-    │   │       ├── ContainerWithMostWater.class
-    │   │       ├── IntegerToRoman.class
-    │   │       ├── LetterCombinationsOfAPhoneNumber.class
-    │   │       ├── LongestPalindromicSubstring.class
-    │   │       ├── LongestSubstringWithoutRepeatingCharacters.class
-    │   │       ├── RemoveNthNodeFromEndOfList.class
-    │   │       └── StringtoInteger.class
-    │   └── utils
-    │       └── ListNode.class
-    ├── generated-sources
-    │   └── annotations
-    ├── generated-test-sources
-    │   └── test-annotations
-    └── test-classes
+src
+├── main
+│   └── java
+│       ├── interviews
+│       │   ├── epam
+│       │   │   └── Task.java
+│       │   └── tigra
+│       │       ├── AbstractListNode.java
+│       │       ├── DoubleLinkedList.java
+│       │       ├── DoubleLinkedListNode.java
+│       │       ├── IList.java
+│       │       ├── IListNode.java
+│       │       ├── NoRefLinkedList.java
+│       │       ├── NoRefLinkedListNode.java
+│       │       ├── SingleLinkedList.java
+│       │       └── SingleLinkedListNode.java
+│       ├── leetcode
+│       │   ├── easy
+│       │   │   ├── exceptions
+│       │   │   │   └── CantCutException.java
+│       │   │   ├── LongestCommonPrefix.java
+│       │   │   ├── MergeTwoSortedLists.java
+│       │   │   ├── PalindromeNumber.java
+│       │   │   ├── RemoveDuplicatesFromSortedArray.java
+│       │   │   ├── RemoveElement.java
+│       │   │   ├── ReverseInteger.java
+│       │   │   ├── RomanToInteger.java
+│       │   │   ├── TwoSum.java
+│       │   │   └── ValidParentheses.java
+│       │   ├── hard
+│       │   │   └── MediaOofTwoSortedArrays.java
+│       │   └── medium
+│       │       ├── AddTwoNumbers.java
+│       │       ├── ContainerWithMostWater.java
+│       │       ├── IntegerToRoman.java
+│       │       ├── LetterCombinationsOfAPhoneNumber.java
+│       │       ├── LongestPalindromicSubstring.java
+│       │       ├── LongestSubstringWithoutRepeatingCharacters.java
+│       │       ├── RemoveNthNodeFromEndOfList.java
+│       │       └── StringtoInteger.java
+│       └── utils
+│           └── ListNode.java
+└── test
+    └── java
         ├── interviews
         │   ├── epam
-        │   │   └── TaskTest.class
+        │   │   └── TaskTest.java
         │   └── tigra
-        │       └── TaskTest.class
+        │       └── TaskTest.java
         └── leetcode
             ├── easy
-            │   ├── LongestCommonPrefixTest.class
-            │   ├── MergeTwoSortedListsTest.class
-            │   ├── PalindromeNumberTest.class
-            │   ├── RemoveDuplicatesFromSortedArrayTest.class
-            │   ├── RemoveElementTest.class
-            │   ├── ReverseIntegerTest.class
-            │   ├── RomanToIntegerTest.class
-            │   ├── TwoSumTest$1.class
-            │   ├── TwoSumTest.class
-            │   ├── TwoSumTest$Model.class
-            │   └── ValidParenthesesTest.class
+            │   ├── LongestCommonPrefixTest.java
+            │   ├── MergeTwoSortedListsTest.java
+            │   ├── PalindromeNumberTest.java
+            │   ├── RemoveDuplicatesFromSortedArrayTest.java
+            │   ├── RemoveElementTest.java
+            │   ├── ReverseIntegerTest.java
+            │   ├── RomanToIntegerTest.java
+            │   ├── TwoSumTest.java
+            │   └── ValidParenthesesTest.java
             ├── hard
-            │   └── MediaOofTwoSortedArraysTest.class
+            │   └── MediaOofTwoSortedArraysTest.java
             └── medium
-                ├── AddTwoNumbersTest.class
-                ├── ContainerWithMostWaterTest.class
-                ├── IntegerToRomanTest.class
-                ├── LetterCombinationsOfAPhoneNumberTest.class
-                ├── LongestPalindromicSubstringTest.class
-                ├── LongestSubstringWithoutRepeatingCharactersTest.class
-                ├── RemoveNthNodeFromEndOfListTest.class
-                ├── RemoveNthNodeFromEndOfListTest$Data.class
-                └── StringtoIntegerTest.class
+                ├── AddTwoNumbersTest.java
+                ├── ContainerWithMostWaterTest.java
+                ├── IntegerToRomanTest.java
+                ├── LetterCombinationsOfAPhoneNumberTest.java
+                ├── LongestPalindromicSubstringTest.java
+                ├── LongestSubstringWithoutRepeatingCharactersTest.java
+                ├── RemoveNthNodeFromEndOfListTest.java
+                └── StringtoIntegerTest.java
 
-44 directories, 106 files
+20 directories, 50 files
 ```
