@@ -36,7 +36,11 @@ Skeleton structure was exist.
 ### Hard problems
 - [4. Median of Two Sorted Arrays](https://leetcode.com/problems/median-of-two-sorted-arrays/description/) *(it was easy... ^^)*
 
-# Tree
+# Environments
+- **OS:** ArchLinux
+- **IDE:** I use IntelliJ IDEA Ultimate (personal license)
+- **JDK:** OpenJDK 9
+
 ```
 src
 ├── main
