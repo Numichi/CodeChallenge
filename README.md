@@ -3,10 +3,18 @@
 # Interviews
 I was some companies in an interview and I got programming tasks. I try reproduce those here.
 
-### Epam [website](https://www.epam.com/)
-Simple task, look test class.
+### Epam 
+[website](http://www.tigra.hu/en/)]
+[Code](https://github.com/Numichi/CodeChallenge/tree/master/src/main/java/interviews/epam)
+[Test](https://github.com/Numichi/CodeChallenge/tree/master/src/test/java/interviews/epam)
 
-### Tigra [website](http://www.tigra.hu/en/)
+I was a simple task.
+
+### Tigra 
+[website](http://www.tigra.hu/en/)
+[Code](https://github.com/Numichi/CodeChallenge/tree/master/src/main/java/interviews/tigra)
+[Test](https://github.com/Numichi/CodeChallenge/tree/master/src/test/java/interviews/tigra)
+
 Implement IList interfaces and ...Node classes.
 Skeleton structure was exist.
 
