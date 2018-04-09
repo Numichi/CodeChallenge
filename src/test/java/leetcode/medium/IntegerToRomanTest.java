@@ -11,6 +11,6 @@ public class IntegerToRomanTest
         IntegerToRoman s = new IntegerToRoman();
     
         Assert.assertEquals(s.intToRoman(11), "XI");
-        Assert.assertEquals(s.intToRoman(10), "C");
+        Assert.assertEquals(s.intToRoman(10), "X");
     }
 }
