@@ -1,14 +1,14 @@
 [![Build Status](https://travis-ci.org/Numichi/CodeChallenge.svg?branch=master)](https://travis-ci.org/Numichi/CodeChallenge)
 
 # Interviews
-I was some companies in an interview and I got programming tasks. I try reproduce those here.
+I was at some companies for giving interviews and I got some programming tasks. I am trying reproduce those below.
 
 ### Epam 
 [[website](http://www.tigra.hu/en/)]
 [[Code](https://github.com/Numichi/CodeChallenge/tree/master/src/main/java/interviews/epam)]
 [[Test](https://github.com/Numichi/CodeChallenge/tree/master/src/test/java/interviews/epam)]
 
-I was a simple task.
+It was a simple task.
 
 ### Tigra 
 [[website](http://www.tigra.hu/en/)]
