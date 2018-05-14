@@ -1,5 +1,6 @@
 package myfriends.wfrobi.org.mik.oppkata;
 
+import myfriends.wfrobi.org.mik.oopkata.Exam;
 import org.junit.After;
 
 import java.io.BufferedWriter;

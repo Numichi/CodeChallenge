@@ -1,7 +1,7 @@
 package myfriends.wfrobi.org.mik.oppkata;
 
+import myfriends.wfrobi.org.mik.oopkata.domain.*;
 import org.junit.Test;
-import org.mik.oopkata.domain.*;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Method;
