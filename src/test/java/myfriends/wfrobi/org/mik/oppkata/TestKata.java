@@ -270,6 +270,7 @@ public class TestKata extends AbstractTest {
 		assertEquals(ST_NAME, s1.getName());
 		increaseResult(1);
 
+		// won't setBirthYear be testing?
 		assertEquals(S_BY,s1.getBirthYear());
 		increaseResult(1);
 
@@ -447,6 +448,8 @@ public class TestKata extends AbstractTest {
 		assertNotNull(sts);
 		increaseResult(1);
 
+		// -.- really? university.getStudents().size() == TEACHER_NAMES.length ???
+		// it can be invalid, just add a new item into TEACHER_NAMES array
 		assertEquals(sts.size(), TEACHER_NAMES.length);
 		increaseResult(1);
 		
