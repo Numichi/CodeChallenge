@@ -47,3 +47,6 @@ Responsive Business Solutions did not supported publish.
 - [Climbing the Leaderboard](https://www.hackerrank.com/challenges/climbing-the-leaderboard/problem)
 
 ### Hard problems
+
+# Helping and/or learning to my friends
+- **package:** myfriends.wfrobi.org.mik.oppkata
