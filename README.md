@@ -1,17 +1,18 @@
 [![Build Status](https://travis-ci.org/Numichi/CodeChallenge.svg?branch=master)](https://travis-ci.org/Numichi/CodeChallenge)
 
 # Interviews
-I was some companies in an interview and I got programming tasks. I try reproduce those here.
+My friends, or I was some companies in an interview and we got programming tasks. I try reproduce those here.
 
-### Epam [website](https://www.epam.com/)
-Simple task, look test class.
+### from Epam
+1) **Junior**: count number
+2) **Junior**: max deep number
 
-### Tigra [website](http://www.tigra.hu/en/)
+### from Tigra
 Implement IList interfaces and ...Node classes.
 Skeleton structure was exist.
 
-### Responsive Business Solutions [website](http://www.rbsolutions.hu/)
-Responsive Business Solutions did not supported publish.
+### from Responsive Business Solutions
+Responsive Business Solutions did not supported publish. :(
 
 # LeetCode [website](https://leetcode.com/problemset/all/)
 

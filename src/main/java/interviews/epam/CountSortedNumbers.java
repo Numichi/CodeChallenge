@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
 
-class Task
+class CountSortedNumbers
 {
     List<Integer> task(int... input)
     {
