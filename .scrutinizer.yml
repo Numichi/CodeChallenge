@@ -1,9 +1,0 @@
-checks:
-    java: true
-build:
-    environment:
-        sdkman:
-            - maven
-filter:
-    excluded_paths:
-        - test/*
