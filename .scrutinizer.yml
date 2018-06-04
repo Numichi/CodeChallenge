@@ -1,0 +1,10 @@
+checks:
+    java: true
+build:
+    environment:
+        java: 'java-9-openjdk'
+        sdkman:
+            - maven
+filter:
+    excluded_paths:
+        - test/*
