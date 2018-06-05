@@ -7,7 +7,9 @@
 |            | Easy | Medium | Hard |
 |------------|:----:|:------:|:----:|
 | Leetcode   |   9  |    8   |   1  |
-| Hackerrank |   4  |    1   |   0  |
+| Hackerrank |   6  |    1   |   0  |
+|------------|------| ------ |------|
+| Sum        |  15  |    9   |   1  |
 
 # Helping and/or learning to my friends
 - **package:** tasks.myfriends.*
