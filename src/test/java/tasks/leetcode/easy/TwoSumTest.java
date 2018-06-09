@@ -1,75 +1,33 @@
 package tasks.leetcode.easy;
 
 import org.testng.Assert;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import java.util.Arrays;
+public class TwoSumTest {
+    private TwoSum twoSum;
 
-public class TwoSumTest
-{
-    @Test
-    public void test()
-    {
-        Model[] models = new Model[]{
-                new Model().setArr(1, 2, 3, 4).setTarget(6).setExcept(1, 3),
-                new Model().setArr(5, 5, 5).setTarget(10).setExcept(0, 1),
-                new Model().setArr().setTarget(10).setExcept(0, 0),
-                new Model().setArr(0).setTarget(0).setExcept(0, 0),
-        };
-        
-        TwoSum s = new TwoSum();
-        for(Model item : models) {
-            int[] result = s.twoSum(item.getArr(), item.getTarget());
-            Assert.assertEquals(result, item.getExcept(), item.toString() + "$" + Arrays.toString(result));
-        }
+    @BeforeClass
+    public void setUpBeforeClass() {
+        twoSum = new TwoSum();
     }
-    
-    private class Model
-    {
-        private int[] arr;
-        private int   target;
-        private int[] except;
-        
-        Model setArr(int... arr)
-        {
-            this.arr = arr;
-            
-            return this;
-        }
-        
-        Model setTarget(int target)
-        {
-            this.target = target;
-            
-            return this;
-        }
-        
-        Model setExcept(int... except)
-        {
-            this.except = except;
-            
-            return this;
-        }
-        
-        int[] getArr()
-        {
-            return arr;
-        }
-        
-        int getTarget()
-        {
-            return target;
-        }
-        
-        int[] getExcept()
-        {
-            return except;
-        }
-        
-        @Override
-        public String toString()
-        {
-            return Arrays.toString(this.arr) + "{" + this.target + "}" + Arrays.toString(this.except);
-        }
+
+    @DataProvider(name = "data-default")
+    public Object[][] dataProvider() {
+        return new Object[][] {
+            { new int[] { 5, 5, 5 }, 10, new int[] { 0, 1 } },
+            { new int[] {}, 10, new int[] { -1, -1 } },
+            { new int[] { 0 }, 0, new int[] { -1, -1 } },
+            { new int[] { 1, 2, 3, 4 }, 1, new int[] { -1, -1 } },
+            { new int[] { 1, 2, 3, 4 }, 2, new int[] { -1, -1 } },
+            { new int[] { 1, 2, 3, 4 }, 3, new int[] { 0, 1 } },
+            { new int[] { 1, 2, 3, 4 }, 5, new int[] { 0, 3 } },
+        };
+    }
+
+    @Test(dataProvider = "data-default")
+    public void test(int[] array, int target, int[] excepted) {
+        Assert.assertEquals(twoSum.twoSum(array, target), excepted);
     }
 }

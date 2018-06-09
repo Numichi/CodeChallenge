@@ -1,27 +1,32 @@
 package tasks.leetcode.easy;
 
 import org.testng.Assert;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 public class PalindromeNumberTest
 {
-    @Test
-    public void test() {
-        Object[][] arr = {
+    private PalindromeNumber palindromeNumber;
+
+    @BeforeClass
+    public void setUpBeforeClass() {
+        palindromeNumber = new PalindromeNumber();
+    }
+
+    @DataProvider(name = "data-default")
+    public Object[][] dataProvider() {
+        return new Object[][] {
             {1111, true},
             {12334, false},
             {543212345, true},
             {11213, false},
             {1, true},
         };
+    }
 
-        PalindromeNumber s = new PalindromeNumber();
-        for(Object[] item : arr) {
-            Assert.assertEquals(
-                s.isPalindrome((int) item[0]),
-                (boolean) item[1],
-                "[" + Integer.toString((int) item[0]) + "]"
-            );
-        }
+    @Test(dataProvider = "data-default")
+    public void test(int index, boolean excepted) {
+        Assert.assertEquals(palindromeNumber.isPalindrome(index), excepted);
     }
 }

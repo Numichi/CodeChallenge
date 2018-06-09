@@ -2,39 +2,32 @@ package tasks.leetcode.medium;
 
 import lib.node.ListNode;
 
-public class RemoveNthNodeFromEndOfList
-{
-    public ListNode<Integer> removeNthFromEnd(ListNode<Integer> head, int n) {
+class RemoveNthNodeFromEndOfList {
+    ListNode<Integer> removeNthFromEnd(ListNode<Integer> head, int n) {
         ListNode<Integer> result = new ListNode<>(0);
         ListNode<Integer> current = result;
-        
-        while(head != null) {
-            if(!found(head, n)) {
-                current.next = new ListNode<>(head.val);
-                current = current.next;
+        while (head != null) {
+            if (!found(head, n)) {
+                current.setNext(new ListNode<>(head.getValue()));
+                current = current.getNext();
             }
-    
-            head = head.next;
+            head = head.getNext();
         }
-        
-        return result.next;
+        return result.getNext();
     }
-    
-    private boolean found(ListNode<Integer> input, int n)
-    {
+
+    private boolean found(ListNode<Integer> input, int n) {
         ListNode<Integer> current = input;
-        
         try {
-            for(int i = 0; i < n - 1; i++) {
-                current = current.next;
+            for (int i = 0; i < n - 1; i++) {
+                current = current.getNext();
             }
-            
-            if(current.next == null) {
+            if (current.getNext() == null) {
                 return true;
             }
-        } catch(NullPointerException e) {
+        } catch (NullPointerException e) {
+            // nothing
         }
-    
         return false;
     }
 }

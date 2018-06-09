@@ -1,60 +1,121 @@
 package tasks.interviews.epam;
 
-
+import lib.node.TreeNode;
 import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-import lib.node.Node;
 
 public class DeepNumberTest {
-    DeepNumber deepNumber;
+    private DeepNumber deepNumber;
     
     @BeforeTest
     public void init() {
         deepNumber = new DeepNumber();
     }
-    
-    @Test
-    public void test1() {
-        Assert.assertEquals(deepNumber.getMaxDeep(null), 0);
-        Assert.assertEquals(deepNumber.getMaxDeep(new Node()), 1);
+
+    @DataProvider(name = "data-default")
+    public Object[][] dataDefault() {
+        return new Object[][] {
+            { null, 0 },
+            { new TreeNode(), 1 },
+            { deepElement2(), 2 },
+            { deepElement3(), 3 },
+            { deepElement4(), 4 },
+            { deepElement5(), 5 },
+            { deepBinary3433(), 4 },
+            { deepBinary3436(), 6 },
+        };
     }
-    
-    @Test
-    public void test2() {
-        Node root = new Node();
-        root.setRight(new Node());
-        Assert.assertEquals(deepNumber.getMaxDeep(root), 2);
-    
-        root.setLeft(new Node());
-        Assert.assertEquals(deepNumber.getMaxDeep(root), 2);
-        
-        root.getRight().setRight(new Node());
-        Assert.assertEquals(deepNumber.getMaxDeep(root), 3);
-    
-        root.getRight().getRight().setRight(new Node());
-        Assert.assertEquals(deepNumber.getMaxDeep(root), 4);
+
+    @Test(dataProvider = "data-default")
+    public void test(TreeNode<Void> node, int expected) {
+        Assert.assertEquals(deepNumber.getMaxDeep(node), expected);
     }
-    
-    @Test
-    public void test3() {
-        Node root = new Node();
-        
-        root.setRight(new Node());
-        root.getRight().setRight(new Node());
-        
-        root.setLeft(new Node());
-        root.getLeft().setLeft(new Node());
-        root.getLeft().setRight(new Node());
-        
-        root.getLeft().getRight().setLeft(new Node());
-        root.getLeft().getRight().setRight(new Node());
-        
-        root.getLeft().getRight().getRight().setLeft(new Node());
-        
-        Assert.assertEquals(deepNumber.getMaxDeep(root), 5);
-        Assert.assertEquals(deepNumber.getMaxDeep(root.getLeft()), 4);
-        Assert.assertEquals(deepNumber.getMaxDeep(root.getLeft().getLeft()), 1);
-        Assert.assertEquals(deepNumber.getMaxDeep(root.getLeft().getLeft().getRight()), 0);
+
+    private TreeNode deepElement2() {
+        TreeNode<Void> root = new TreeNode<>();
+        root.setRightChild(new TreeNode<>());
+        return root;
+    }
+
+
+    private TreeNode<Void> deepElement3() {
+        TreeNode<Void> root = new TreeNode<>();
+        root.setRightChild(new TreeNode<>());
+        root.getRightChild().setRightChild(new TreeNode<>());
+        return root;
+    }
+
+    private TreeNode<Void> deepElement4() {
+        TreeNode<Void> root = new TreeNode<>();
+        root.setRightChild(new TreeNode<>());
+        root.getRightChild().setRightChild(new TreeNode<>());
+        root.getRightChild().getRightChild().setRightChild(new TreeNode<>());
+        return root;
+    }
+
+    private TreeNode<Void> deepElement5() {
+        TreeNode<Void> root = new TreeNode<>();
+        root.setRightChild(new TreeNode<>());
+        root.getRightChild().setRightChild(new TreeNode<>());
+        root.getRightChild().getRightChild().setRightChild(new TreeNode<>());
+        root.getRightChild().getRightChild().getRightChild().setRightChild(new TreeNode<>());
+        return root;
+    }
+
+    //      *
+    //     / \
+    //    /   \
+    //   *     *
+    //  / \   / \
+    // *   * *   *
+    //      \
+    //       *
+    private TreeNode<Void> deepBinary3433() {
+        TreeNode<Void> root = new TreeNode<>();
+
+        root.setRightChild(new TreeNode<>());
+        root.setLeftChild(new TreeNode<>());
+
+        root.getRightChild().setRightChild(new TreeNode<>());
+        root.getRightChild().setLeftChild(new TreeNode<>());
+        root.getLeftChild().setRightChild(new TreeNode<>());
+        root.getLeftChild().setLeftChild(new TreeNode<>());
+
+        root.getLeftChild().getRightChild().setRightChild(new TreeNode<>());
+
+        return root;
+    }
+
+    //      *
+    //     / \
+    //    /   \
+    //   *     *
+    //  / \   / \
+    // *   * *   *
+    //    /       \
+    //   *         *
+    //            /
+    //           *
+    //            \
+    //             *
+    private TreeNode<Void> deepBinary3436() {
+        TreeNode<Void> root = new TreeNode<>();
+        root.setRightChild(new TreeNode<>());
+        root.setLeftChild(new TreeNode<>());
+
+        root.getRightChild().setRightChild(new TreeNode<>());
+        root.getRightChild().setLeftChild(new TreeNode<>());
+        root.getLeftChild().setRightChild(new TreeNode<>());
+        root.getLeftChild().setLeftChild(new TreeNode<>());
+
+        root.getLeftChild().getRightChild().setLeftChild(new TreeNode<>());
+
+        root.getRightChild().getRightChild().setRightChild(new TreeNode<>());
+        root.getRightChild().getRightChild().getRightChild().setLeftChild(new TreeNode<>());
+        root.getRightChild().getRightChild().getRightChild().getLeftChild().setRightChild(new TreeNode<>());
+
+        return root;
     }
 }

@@ -1,29 +1,30 @@
 package tasks.leetcode.easy;
 
 import org.testng.Assert;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import java.util.Arrays;
+public class RemoveDuplicatesFromSortedArrayTest {
+    private RemoveDuplicatesFromSortedArray removeDuplicates;
 
-public class RemoveDuplicatesFromSortedArrayTest
-{
-    private RemoveDuplicatesFromSortedArray s;
-    
-    @Test
-    public void test()
-    {
-        this.s = new RemoveDuplicatesFromSortedArray();
-        
-        this.item(new int[]{1, 1, 2}, 2, new int[]{1, 2});
-        this.item(new int[]{1, 1, 2, 3}, 3, new int[]{1, 2, 3});
-        this.item(new int[]{1, 1, 2, 3, 3}, 3, new int[]{1, 2, 3});
-        this.item(new int[]{1, 1}, 1, new int[]{1});
+    @BeforeClass
+    public void setUpBeforeClass() {
+        removeDuplicates = new RemoveDuplicatesFromSortedArray();
     }
-    
-    private void item(int[] input, int exp, int[] expArr)
-    {
-        int result = s.removeDuplicates(input);
-        Assert.assertEquals(result, exp);
-        Assert.assertEquals(Arrays.copyOfRange(this.s.nums, 0, result), expArr);
+
+    @DataProvider(name = "data-default")
+    public Object[][] dataProvider() {
+        return new Object[][] {
+            { new int[] { 1, 1, 2 }, 2 },
+            { new int[] { 1, 1, 2, 3 }, 3 },
+            { new int[] { 1, 1, 2, 3, 3 }, 3 },
+            { new int[] { 1, 1 }, 1 },
+        };
+    }
+
+    @Test(dataProvider = "data-default")
+    public void test(int[] input, int expected) {
+        Assert.assertEquals(removeDuplicates.removeDuplicates(input), expected);
     }
 }

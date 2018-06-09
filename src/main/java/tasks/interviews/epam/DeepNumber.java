@@ -1,16 +1,16 @@
 package tasks.interviews.epam;
 
-import lib.node.Node;
+import lib.node.TreeNode;
 
 class DeepNumber {
-    int getMaxDeep(Node root) {
+    int getMaxDeep(TreeNode<Void> root) {
         if(root == null) {
             return 0;
         }
-        
-        int left = getMaxDeep(root.getLeft());
-        int right = getMaxDeep(root.getRight());
-        
-        return 1 + (left < right ? right : left);
+
+        int left = 1 + getMaxDeep(root.getLeftChild());
+        int right = 1 + getMaxDeep(root.getRightChild());
+
+        return (left < right ? right : left);
     }
 }

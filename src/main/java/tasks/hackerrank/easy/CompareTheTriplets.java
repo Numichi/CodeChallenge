@@ -2,7 +2,6 @@ package tasks.hackerrank.easy;
 
 class CompareTheTriplets {
     int[] solve(int[] a, int[] b) {
-        System.out.println(10);
         if(a == null || b == null) {
             throw new NullPointerException();
         }

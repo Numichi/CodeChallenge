@@ -2,6 +2,7 @@ package tasks.hackerrank.easy;
 
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 public class CompareTheTripletsTest {
@@ -12,63 +13,48 @@ public class CompareTheTripletsTest {
         compareTheTriplets = new CompareTheTriplets();
     }
 
-    @Test
-    public void solveTest() {
-        Assert.assertEquals(
-            new int[]{0, 0},
-            compareTheTriplets.solve(
-                new int[]{1, 2, 3, 4, 5},
-                new int[]{1, 2, 3, 4, 5}
-            )
-        );
-
-        Assert.assertEquals(
-            new int[]{0, 5},
-            compareTheTriplets.solve(
-                new int[]{1, 2, 3, 4, 5},
-                new int[]{2, 3, 4, 5, 6}
-            )
-        );
-
-        Assert.assertEquals(
-            new int[]{3, 2},
-            compareTheTriplets.solve(
-                new int[]{100, 99, 98, 4, 5},
-                new int[]{2, 3, 4, 5, 6}
-            )
-        );
+    @DataProvider(name = "data-default")
+    public static Object[][] dataProviderDefault() {
+        return new Object[][] {
+            { new int[] { 1, 2, 3, 4, 5 }, new int[] { 1, 2, 3, 4, 5 }, new int[] { 0, 0 } },
+            { new int[] { 1, 2, 3, 4, 5 }, new int[] { 2, 3, 4, 5, 6 }, new int[] { 0, 5 } },
+            { new int[] { 100, 99, 98, 4, 5 }, new int[] { 2, 3, 4, 5, 6 }, new int[] { 3, 2 } },
+        };
     }
 
-    @Test(expectedExceptions = NullPointerException.class)
-    public void solveNullableVer1Test() {
-        Assert.assertEquals(
-            new int[]{3, 2},
-            compareTheTriplets.solve(
-                null,
-                new int[]{2, 3, 4, 5, 6}
-            )
-        );
+    @DataProvider(name = "data-with-null")
+    public static Object[][] dataProviderWithNull() {
+        return new Object[][] {
+            { null, new int[] { 2, 3, 4, 5, 6 }, new int[] { 3, 2 } },
+            { new int[] { 2, 3, 4, 5, 6 }, null, new int[] { 3, 2 } },
+            { null, null, new int[] { 3, 2 } },
+        };
     }
 
-    @Test(expectedExceptions = NullPointerException.class)
-    public void solveNullableVer2Test() {
-        Assert.assertEquals(
-            new int[]{3, 2},
-            compareTheTriplets.solve(
-                null,
-                null
-            )
-        );
+    @DataProvider(name = "data-with-array-index")
+    public static Object[][] dataProviderWithArrayIndex() {
+        return new Object[][] {
+            { new int[] { 1, 2, 3, 4, 5, 6, 7, 8 }, new int[] { 2, 3, 4, 5, 6 }, new int[] { 0, 5 } },
+            { new int[] { 100, 99, 98, 4, 5 }, new int[] { 2, 3, 4, 5, 6, 7, 8, 9, 10 }, new int[] { 3, 2 } },
+        };
     }
 
-    @Test(expectedExceptions = ArrayIndexOutOfBoundsException.class)
-    public void solveLengthProblemTest() {
-        Assert.assertEquals(
-            new int[]{3, 2},
-            compareTheTriplets.solve(
-                new int[]{2, 3, 4, 5, 6, 7},
-                new int[]{2, 3, 4, 5, 6}
-            )
-        );
+    private void test(int[] p1, int[] p2, int[] expected) {
+        Assert.assertEquals(compareTheTriplets.solve(p1, p2), expected);
+    }
+
+    @Test(dataProvider = "data-default")
+    public void solveTest(int[] p1, int[] p2, int[] expected) {
+        test(p1, p2, expected);
+    }
+
+    @Test(dataProvider = "data-with-null", expectedExceptions = NullPointerException.class)
+    public void solveNullableTest(int[] p1, int[] p2, int[] expected) {
+        test(p1, p2, expected);
+    }
+
+    @Test(dataProvider = "data-with-array-index", expectedExceptions = ArrayIndexOutOfBoundsException.class)
+    public void solveLengthProblemTest(int[] p1, int[] p2, int[] expected) {
+        test(p1, p2, expected);
     }
 }

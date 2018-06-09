@@ -1,69 +1,30 @@
 package lib.node;
 
-public class ListNode<T>
-{
-    public T val;
-    
-    public ListNode<T> next;
-    
-    public ListNode(T x)
-    {
-        val = x;
+public class ListNode<V> {
+    private ListNode<V> next = null;
+    private V value = null;
+
+    public ListNode() {
+        // nothing
     }
-    
-    public ListNode()
-    {}
-    
-    public ListNode<T> factory(T... params)
-    {
-        ListNode<T> var1 = new ListNode<>();
-        ListNode<T> var2 = var1;
-        
-        for(T item : params) {
-            var2.next = new ListNode<>(item);
-            var2 = var2.next;
-        }
-        
-        return var1.next;
+
+    public ListNode(V value) {
+        this.value = value;
     }
-    
-    public boolean checkNullable(ListNode<T> var1, ListNode<T> var2)
-    {
-        return checkNullable(var1, var2, true);
+
+    public ListNode<V> getNext() {
+        return next;
     }
-    
-    public boolean checkNullable(ListNode<T> var1, ListNode<T> var2, boolean lookValue)
-    {
-        return var1 == null && var2 == null || check(var1, var2, lookValue);
+
+    public void setNext(ListNode<V> next) {
+        this.next = next;
     }
-    
-    public boolean check(ListNode<T> var1, ListNode<T> var2)
-    {
-        return check(var1, var2, true);
+
+    public V getValue() {
+        return value;
     }
-    
-    public boolean check(ListNode<T> var1, ListNode<T> var2, boolean lookValue)
-    {
-        ListNode<T> temp1;
-        ListNode<T> temp2;
-        
-        while(var1 != null && var2 != null && (!lookValue || var1.val == var2.val)) {
-            temp1 = var1.next;
-            temp2 = var2.next;
-            
-            // XOR
-            if((temp1 == null && temp2 != null) || (temp1 != null && temp2 == null)) {
-                return false;
-            }
-            
-            var1 = temp1;
-            var2 = temp2;
-            
-            if(var1 == null) {
-                return true;
-            }
-        }
-        
-        return false;
+
+    public void setValue(V value) {
+        this.value = value;
     }
 }

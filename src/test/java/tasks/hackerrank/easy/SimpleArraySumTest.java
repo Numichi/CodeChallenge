@@ -2,6 +2,7 @@ package tasks.hackerrank.easy;
 
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 public class SimpleArraySumTest {
@@ -12,11 +13,18 @@ public class SimpleArraySumTest {
         simpleArraySum = new SimpleArraySum();
     }
 
-    @Test
-    public void simpleArraySumTest() {
-        Assert.assertEquals(0, simpleArraySum.simpleArraySum(null));
-        Assert.assertEquals(0, simpleArraySum.simpleArraySum(new int[]{}));
-        Assert.assertEquals(31, simpleArraySum.simpleArraySum(new int[]{1, 2, 3, 4, 10, 11}));
-        Assert.assertEquals(43, simpleArraySum.simpleArraySum(new int[]{1, 2, 3, 4, 10, 11, 12}));
+    @DataProvider(name = "data-default")
+    public static Object[][] dataProviderDefault() {
+        return new Object[][] {
+            { null, 0 },
+            { new int[] {}, 0 },
+            { new int[] { 1, 2, 3, 4, 10, 11 }, 31 },
+            { new int[] { 1, 2, 3, 4, 10, 11, 12 }, 43 },
+        };
+    }
+
+    @Test(dataProvider = "data-default")
+    public void simpleArraySumTest(int[] input, int expected) {
+        Assert.assertEquals(simpleArraySum.simpleArraySum(input), expected);
     }
 }

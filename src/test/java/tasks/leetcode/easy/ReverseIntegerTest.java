@@ -1,27 +1,32 @@
 package tasks.leetcode.easy;
 
 import org.testng.Assert;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-public class ReverseIntegerTest
-{
-    @Test
-    public void test() {
-        int[][] arr = {
-            {1111, 1111},
-            {1222, 2221},
-            {-1222, -2221},
-            {123456, 654321},
-            {-123456, -654321},
-            {1111111119, 0},
-        };
+public class ReverseIntegerTest {
+    private ReverseInteger reverseInteger;
 
-        ReverseInteger s = new ReverseInteger();
-        for(int[] item : arr) {
-            Assert.assertEquals(
-                s.reverse(item[0]),
-                item[1]
-            );
-        }
+    @BeforeClass
+    public void setUpBeforeClass() {
+        reverseInteger = new ReverseInteger();
+    }
+
+    @DataProvider(name = "data-default")
+    public Object[][] dataProvider() {
+        return new Object[][] {
+            { 1111, 1111 },
+            { 1222, 2221 },
+            { -1222, -2221 },
+            { 123456, 654321 },
+            { -123456, -654321 },
+            { 1111111119, 0 },
+        };
+    }
+
+    @Test(dataProvider = "data-default")
+    public void test(int p, int excepted) {
+        Assert.assertEquals(reverseInteger.reverse(p), excepted);
     }
 }

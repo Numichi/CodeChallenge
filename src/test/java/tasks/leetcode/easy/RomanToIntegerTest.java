@@ -1,15 +1,22 @@
 package tasks.leetcode.easy;
 
 import org.testng.Assert;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-
-import static org.testng.Assert.assertEquals;
 
 public class RomanToIntegerTest
 {
-    @Test
-    public void test() {
-        Object[][] arr = {
+    private RomanToInteger romanToInteger;
+
+    @BeforeClass
+    public void setUpBeforeClass() {
+        romanToInteger = new RomanToInteger();
+    }
+
+    @DataProvider(name = "data-default")
+    public Object[][] dataProvider() {
+        return new Object[][] {
             {"I", 1},
             {"IV", 4},
             {"VI", 6},
@@ -18,13 +25,10 @@ public class RomanToIntegerTest
             {"MMXVIII", 2018},
             {"MMCMLXXI", 2971},
         };
+    }
 
-        RomanToInteger s = new RomanToInteger();
-        for(Object[] item : arr) {
-            Assert.assertEquals(
-                s.romanToInt((String) item[0]),
-                (int) item[1]
-            );
-        }
+    @Test(dataProvider = "data-default")
+    public void test(String roman, int excepted) {
+        Assert.assertEquals(romanToInteger.romanToInt(roman), excepted);
     }
 }

@@ -1,40 +1,58 @@
 package tasks.leetcode.easy;
 
-//import org.jetbrains.annotations.Contract;
-
 import lib.node.ListNode;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
+class MergeTwoSortedLists {
+    private ListNode<Integer> head = new ListNode<>();
+    private ListNode<Integer> list = head;
+    private ListNode<Integer> l1;
+    private ListNode<Integer> l2;
 
-public class MergeTwoSortedLists
-{
-    public ListNode<Integer> mergeTwoLists(ListNode<Integer> l1, ListNode<Integer> l2) {
-        List<Integer> list = new ArrayList<>();
-        
-        while(l1 != null || l2 != null) {
-            if(l1 != null) {
-                list.add(l1.val);
-                l1 = l1.next;
-            }
-            if(l2 != null) {
-                list.add(l2.val);
-                l2 = l2.next;
+    ListNode<Integer> mergeTwoLists(ListNode<Integer> l1, ListNode<Integer> l2) {
+        this.l1 = l1;
+        this.l2 = l2;
+
+        while (this.l1 != null || this.l1 != null) {
+            if (this.l1 != null && this.l2 != null) {
+                notNulls();
+            } else {
+                anyNull();
             }
         }
-    
-        Collections.sort(list);
-    
-        ListNode<Integer> root = new ListNode<>();
-        ListNode<Integer> point = root;
-        
-        for(int item : list) {
-            point.next = new ListNode<>();
-            point.next.val = item;
-            point = point.next;
+
+        return head.getNext();
+    }
+
+    private void anyNull() {
+        if(l1 == null) {
+            addElement(l2.getValue());
+            l2 = l2.getNext();
+        } else {
+            addElement(l1.getValue());
+            l1 = l1.getNext();
         }
-        
-        return root.next;
+    }
+
+    private void notNulls() {
+        int v1 = l1.getValue();
+        int v2 = l2.getValue();
+
+        if (v1 == v2) {
+            addElement(v1);
+            addElement(v1);
+            l2 = l2.getNext();
+            l1 = l1.getNext();
+        } else if (v1 < v2) {
+            addElement(v1);
+            l1 = l1.getNext();
+        } else {
+            addElement(v2);
+            l2 = l2.getNext();
+        }
+    }
+
+    private void addElement(int value) {
+        list.setNext(new ListNode<>(value));
+        list = list.getNext();
     }
 }
