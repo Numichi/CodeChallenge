@@ -5,7 +5,8 @@ import java.util.Objects;
 import java.util.Set;
 
 /**
- * Not solution, because: O(n^(3*log(n)) or O(n^4)
+ * Not solution, because detected time complexity
+ * O(n^(3*log(n)) or O(n^4)
  */
 class Zinc2018v1 {
     int solution(int[] A) {
