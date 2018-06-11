@@ -14,7 +14,6 @@ class FrogRiverOne {
             set.add(i);
         }
 
-        int i = 0;
         for(int i = 0; i < A.length; i++) {
             set.remove(A[i]);
             if(set.isEmpty()) {
