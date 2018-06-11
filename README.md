@@ -23,20 +23,20 @@
 |:--------:|:-----------:|:---------:|
 | 9        | 1           | 0         |
 
-### 1.1)Helping and/or learning to my friends
+### 1.1) Helping and/or learning to my friends
 
 - **package:** tasks.myfriends.*
 
 # 2) Interviews
 
-I try reproduce those here.
+I try reproduce task of interviews here.
 
 Publishing reasons:
 - Accepted
 - Not answered
-- Another person just told me task description.
+- Other resources (example from my friend)
 
-Of course, i will not publish it if Company doesn't want to share.
+Of course, I will not publish it if company does not want to share. :'(
 
 ### 2.1) Published
 
