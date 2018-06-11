@@ -2,18 +2,26 @@
 
 # 1) Algorithms
 
-- [LeetCode](https://leetcode.com/problemset/all/) 
-    - **package:** tasks.leetcode.*
-- [HackerRank](https://www.hackerrank.com)
-    - **package:** tasks.hackerrank.*
-- [Codility](https://www.codility.com) 
-    - **package:** tasks.codility.*
+[LeetCode](https://leetcode.com/problemset/all/) - *package:* tasks.leetcode.*
+- just **correctness**
 
-|            | Easy | Medium | Hard |  Lesson |  Challenge |
-|:-----------|:----:|:------:|:----:|:-------:|:----------:|
-| Leetcode   | 9    | 8      | 1    | n/a     | n/a        |
-| Hackerrank | 4    | 1      | 0    | n/a     | n/a        |
-| Codility   | n/a  | n/a    | n/a  |  1-4    | 0          |
+| Easy | Medium | Hard | 
+|:----:|:------:|:----:|
+| 9    | 8      | 1    |
+
+[HackerRank](https://www.hackerrank.com) - *package:* tasks.hackerrank.*
+- just **correctness**
+    
+| Easy | Medium | Hard | Advanced | Expert |
+|:----:|:------:|:----:|:--------:|:------:|
+| 4    | 1      | 0    | 0        | 0      |
+
+[Codility](https://www.codility.com) - *package:* tasks.codility.*
+- **correctness** and **performance** testing. :) 
+
+| Painless | Respectable | Ambitious | 
+|:--------:|:-----------:|:---------:|
+| 9        | 1           | 0         |
 
 ### 1.1)Helping and/or learning to my friends
 
