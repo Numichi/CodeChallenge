@@ -1,33 +1,48 @@
 [![Build Status](https://travis-ci.org/Numichi/CodeChallenge.svg?branch=master)](https://travis-ci.org/Numichi/CodeChallenge)
 
-# Algorithms
-- [LeetCode](https://leetcode.com/problemset/all/) | **package:** tasks.leetcode.*
-- [HackerRank](https://www.hackerrank.com) | **package:** tasks.hackerrank.*
+# 1) Algorithms
 
-|            | Easy | Medium | Hard |
-|------------|:----:|:------:|:----:|
-| Leetcode   |   9  |    8   |   1  |
-| Hackerrank |   6  |    1   |   0  |
-|------------|------| ------ |------|
-| Sum        |  15  |    9   |   1  |
+- [LeetCode](https://leetcode.com/problemset/all/) 
+    - **package:** tasks.leetcode.*
+- [HackerRank](https://www.hackerrank.com)
+    - **package:** tasks.hackerrank.*
+- [Codility](https://www.codility.com) 
+    - **package:** tasks.codility.*
 
-# Helping and/or learning to my friends
+|            | Easy | Medium | Hard |  Lesson |  Challenge |
+|:-----------|:----:|:------:|:----:|:-------:|:----------:|
+| Leetcode   | 9    | 8      | 1    | n/a     | n/a        |
+| Hackerrank | 4    | 1      | 0    | n/a     | n/a        |
+| Codility   | n/a  | n/a    | n/a  |  1-4    | 0          |
+
+### 1.1)Helping and/or learning to my friends
+
 - **package:** tasks.myfriends.*
 
-# Interviews
-My friends, or I was some companies in an interview and we got programming tasks. I try reproduce those here.
+# 2) Interviews
 
-### Epam
-- **package:** tasks.interviews.epam.*
+I try reproduce those here.
 
-1) **Junior**: count number
-2) **Junior**: max deep number
+Publishing reasons:
+- Accepted
+- Not answered
+- Another person just told me task description.
 
-### Tigra
-- **package:** tasks.interviews.tigra.*
+Of course, i will not publish it if Company doesn't want to share.
 
-Implement IList interfaces and ...Node classes.
+### 2.1) Published
+
+**Epam**  - _tasks.interviews.epam.*_
+
+- count number (Junior)
+- max deep number (Junior)
+
+**Tigra** - _tasks.interviews.tigra.*_
+
+- Implement IList interfaces and ...Node classes.
 Skeleton structure was exist.
 
-### Responsive Business Solutions
-Responsive Business Solutions did not supported publish. :(
+### 2.2) Not supported
+
+- Responsive Business Solutions
+- Astron
