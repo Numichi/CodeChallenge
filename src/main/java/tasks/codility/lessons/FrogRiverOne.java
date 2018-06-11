@@ -15,12 +15,11 @@ class FrogRiverOne {
         }
 
         int i = 0;
-        while(i < A.length) {
+        for(int i = 0; i < A.length; i++) {
             set.remove(A[i]);
             if(set.isEmpty()) {
                 return i;
             }
-            i++;
         }
         return -1;
     }
