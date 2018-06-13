@@ -21,11 +21,12 @@
 
 | Painless | Respectable | Ambitious | 
 |:--------:|:-----------:|:---------:|
-| 11       | 1           | 0         |
+| 11       | 2           | 0         |
 
-### 1.1) Helping and/or learning to my friends
+### 1.1) Helping and/or learning to anyone
 
 - **package:** tasks.myfriends.*
+- **package:** tasks.other.*
 
 # 2) Interviews
 
