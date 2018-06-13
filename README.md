@@ -21,7 +21,7 @@
 
 | Painless | Respectable | Ambitious | 
 |:--------:|:-----------:|:---------:|
-| 9        | 1           | 0         |
+| 11       | 1           | 0         |
 
 ### 1.1) Helping and/or learning to my friends
 

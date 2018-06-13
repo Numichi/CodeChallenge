@@ -6,7 +6,7 @@ package tasks.codility.lessons;
  */
 class MaxCounters {
     int[] solution(int N, int[] A) {
-        int result[] = new int[N];
+        final int result[] = new int[N];
         int max = 0;
         int save = 0;
 
