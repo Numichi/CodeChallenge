@@ -4,24 +4,21 @@ import java.util.HashSet;
 import java.util.Set;
 import java.util.Stack;
 
-public class ValidParentheses
-{
-    private Set<Character>   push  = new HashSet<>();
+public class ValidParentheses {
+    private Set<Character> push = new HashSet<>();
     private Stack<Character> stack = new Stack<>();
     
-    public ValidParentheses()
-    {
+    public ValidParentheses() {
         push.add('[');
         push.add('(');
         push.add('{');
     }
     
-    public boolean isValid(String s)
-    {
+    public boolean isValid(String s) {
         this.stack.clear();
         
-        for(char c : s.toCharArray()) {
-            if(!this.process(c)) {
+        for (char c : s.toCharArray()) {
+            if (!this.process(c)) {
                 return false;
             }
         }
@@ -29,21 +26,20 @@ public class ValidParentheses
         return this.stack.isEmpty();
     }
     
-    private boolean process(char c)
-    {
+    private boolean process(char c) {
         // PUSH '(', '[', '{'
-        if(this.push.contains(c)) {
+        if (this.push.contains(c)) {
             this.stack.push(c);
             return true;
         }
         
         // stack is empty -> syntax problem
-        if(this.stack.isEmpty()) {
+        if (this.stack.isEmpty()) {
             return false;
         }
         
         // expect character
-        switch(this.stack.pop()) {
+        switch (this.stack.pop()) {
             case '(':
                 return c == ')';
             case '[':

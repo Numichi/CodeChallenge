@@ -35,11 +35,14 @@ public class LetterCombinationsOfAPhoneNumberTest {
                     "cdh", "cdg", "cdi", "ceh", "ceg", "cei", "cfh", "cfg", "cfi"
                 )
             },
-        };
+            };
     }
 
     @Test(dataProvider = "data-default")
-    public void test(String numbers, List<String> excepted) {
+    public void test(
+        String numbers,
+        List<String> excepted
+    ) {
         Assert.assertEquals(letterCombinationsOfAPhoneNumber.letterCombinations(numbers), excepted);
     }
 }

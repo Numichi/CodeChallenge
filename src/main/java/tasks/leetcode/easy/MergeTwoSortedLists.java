@@ -8,7 +8,10 @@ class MergeTwoSortedLists {
     private ListNode<Integer> l1;
     private ListNode<Integer> l2;
 
-    ListNode<Integer> mergeTwoLists(ListNode<Integer> l1, ListNode<Integer> l2) {
+    ListNode<Integer> mergeTwoLists(
+        ListNode<Integer> l1,
+        ListNode<Integer> l2
+    ) {
         this.l1 = l1;
         this.l2 = l2;
 
@@ -24,7 +27,7 @@ class MergeTwoSortedLists {
     }
 
     private void anyNull() {
-        if(l1 == null) {
+        if (l1 == null) {
             addElement(l2.getValue());
             l2 = l2.getNext();
         } else {

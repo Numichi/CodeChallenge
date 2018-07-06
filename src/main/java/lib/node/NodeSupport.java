@@ -16,7 +16,7 @@ public abstract class NodeSupport {
         }
         return root.getNext();
     }
-
+    
     @SafeVarargs
     public static <T> DoubleListNode<T> doubleFactory(T... params) {
         DoubleListNode<T> root = new DoubleListNode<>();
@@ -32,7 +32,7 @@ public abstract class NodeSupport {
         }
         return root.getRight();
     }
-
+    
     public static <T> List<T> toList(ListNode<T> node) {
         List<T> result = new ArrayList<>();
         while (node != null) {
@@ -41,7 +41,7 @@ public abstract class NodeSupport {
         }
         return result;
     }
-
+    
     public static <T> List<T> toList(DoubleListNode<T> node) {
         List<T> result = new ArrayList<>();
         while (node != null) {

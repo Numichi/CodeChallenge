@@ -1,10 +1,8 @@
 package tasks.leetcode.easy.exceptions;
 
-public class CantCutException extends Throwable
-{
+public class CantCutException extends Throwable {
     @Override
-    public String getMessage()
-    {
+    public String getMessage() {
         return "";
     }
 }

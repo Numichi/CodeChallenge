@@ -3,7 +3,10 @@ package tasks.leetcode.medium;
 import lib.node.ListNode;
 
 class AddTwoNumbers {
-    ListNode<Integer> addTwoNumbers(ListNode<Integer> l1, ListNode<Integer> l2) {
+    ListNode<Integer> addTwoNumbers(
+        ListNode<Integer> l1,
+        ListNode<Integer> l2
+    ) {
         ListNode<Integer> root = new ListNode<>(0);
         ListNode<Integer> current = root;
         int carry = 0;

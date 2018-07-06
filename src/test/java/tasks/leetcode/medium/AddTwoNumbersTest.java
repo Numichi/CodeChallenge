@@ -31,11 +31,15 @@ public class AddTwoNumbersTest {
                 NodeSupport.listFactory(1, 8, 3),
                 Arrays.asList(1, 0, 4)
             },
-        };
+            };
     }
 
     @Test(dataProvider = "data-default")
-    public void test(ListNode<Integer> p1, ListNode<Integer> p2, List<Integer> excepted) {
+    public void test(
+        ListNode<Integer> p1,
+        ListNode<Integer> p2,
+        List<Integer> excepted
+    ) {
         Assert.assertEquals(NodeSupport.toList(addTwoNumbers.addTwoNumbers(p1, p2)), excepted);
     }
 }

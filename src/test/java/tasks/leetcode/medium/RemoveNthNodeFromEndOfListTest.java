@@ -21,16 +21,40 @@ public class RemoveNthNodeFromEndOfListTest {
     @DataProvider(name = "data-default")
     public Object[][] dataProvider() {
         return new Object[][] {
-            { NodeSupport.listFactory(1, 2, 3, 4, 5), 2, NodeSupport.listFactory(1, 2, 3, 5) },
-            { NodeSupport.listFactory(1, 2, 3, 4, 5), 3, NodeSupport.listFactory(1, 2, 4, 5) },
-            { NodeSupport.listFactory(1, 2, 3, 4, 5), 4, NodeSupport.listFactory(1, 3, 4, 5) },
-            { NodeSupport.listFactory(1, 2, 3, 4, 5), 5, NodeSupport.listFactory(2, 3, 4, 5) },
-            { NodeSupport.listFactory(1), 1, null },
-        };
+            {
+                NodeSupport.listFactory(1, 2, 3, 4, 5),
+                2,
+                NodeSupport.listFactory(1, 2, 3, 5)
+            },
+            {
+                NodeSupport.listFactory(1, 2, 3, 4, 5),
+                3,
+                NodeSupport.listFactory(1, 2, 4, 5)
+            },
+            {
+                NodeSupport.listFactory(1, 2, 3, 4, 5),
+                4,
+                NodeSupport.listFactory(1, 3, 4, 5)
+            },
+            {
+                NodeSupport.listFactory(1, 2, 3, 4, 5),
+                5,
+                NodeSupport.listFactory(2, 3, 4, 5)
+            },
+            {
+                NodeSupport.listFactory(1),
+                1,
+                null
+            },
+            };
     }
 
     @Test(dataProvider = "data-default")
-    public void test(ListNode<Integer> input, int param, ListNode<Integer> exceptedListNode) {
+    public void test(
+        ListNode<Integer> input,
+        int param,
+        ListNode<Integer> exceptedListNode
+    ) {
         List<Integer> excepted = NodeSupport.toList(exceptedListNode);
         List<Integer> actual = NodeSupport.toList(removeNthNodeFromEndOfList.removeNthFromEnd(input, param));
         Assert.assertEquals(excepted, actual);

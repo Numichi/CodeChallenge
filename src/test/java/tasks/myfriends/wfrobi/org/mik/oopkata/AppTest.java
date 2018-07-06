@@ -7,10 +7,10 @@ import org.junit.runners.Suite;
  * Unit test for simple App.
  */
 @RunWith(Suite.class)
-@Suite.SuiteClasses ({
-	TestKata.class
+@Suite.SuiteClasses({
+    TestKata.class
 })
 
-public class AppTest{
-	//NC.
+public class AppTest {
+    //NC.
 }

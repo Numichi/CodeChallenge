@@ -16,13 +16,22 @@ public class IntegerToRomanTest {
     @DataProvider(name = "data-default")
     public Object[][] dataProvider() {
         return new Object[][] {
-            { 11, "XI" },
-            { 10, "X" },
-        };
+            {
+                11,
+                "XI"
+            },
+            {
+                10,
+                "X"
+            },
+            };
     }
 
     @Test(dataProvider = "data-default")
-    public void test(int value, String excepted) {
+    public void test(
+        int value,
+        String excepted
+    ) {
         Assert.assertEquals(integerToRoman.intToRoman(value), excepted);
     }
 }

@@ -4,7 +4,7 @@ class AVeryBigSum {
     long aVeryBigSum(long[] ar) {
         long result = 0;
 
-        if(ar != null) {
+        if (ar != null) {
             for (long x : ar) {
                 result += x;
             }

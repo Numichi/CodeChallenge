@@ -1,14 +1,12 @@
 package tasks.interviews.tigra;
 
-public class SingleLinkedList implements IList
-{
+public class SingleLinkedList implements IList {
     private SingleLinkedListNode single = null;
     private int count = 0;
 
     @Override
-    public void add(String s)
-    {
-        if(single == null) {
+    public void add(String s) {
+        if (single == null) {
             single = new SingleLinkedListNode(s);
         } else {
             SingleLinkedListNode head = single;
@@ -24,8 +22,7 @@ public class SingleLinkedList implements IList
     }
 
     @Override
-    public IListNode find(String i)
-    {
+    public IListNode find(String i) {
         IListNode ret = null;
         SingleLinkedListNode head = single;
 
@@ -33,7 +30,7 @@ public class SingleLinkedList implements IList
             head = head.getNext();
         }
 
-        if(head != null) {
+        if (head != null) {
             ret = head;
         }
 
@@ -41,13 +38,12 @@ public class SingleLinkedList implements IList
     }
 
     @Override
-    public void delete(IListNode node)
-    {
-        if(node == null || single == null) {
+    public void delete(IListNode node) {
+        if (node == null || single == null) {
             return;
         }
 
-        if(single == node) {
+        if (single == node) {
             single = single.getNext();
             count--;
         } else {
@@ -57,7 +53,7 @@ public class SingleLinkedList implements IList
                 head = head.getNext();
             }
 
-            if(head != null && head.getNext() == node) {
+            if (head != null && head.getNext() == node) {
                 head.setNext(head.getNext().getNext());
                 count--;
             }
@@ -65,8 +61,7 @@ public class SingleLinkedList implements IList
     }
 
     @Override
-    public String[] all()
-    {
+    public String[] all() {
         int i = 0;
         String[] arr = new String[count];
 

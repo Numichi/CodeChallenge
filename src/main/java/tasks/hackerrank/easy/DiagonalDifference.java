@@ -4,15 +4,15 @@ import exception.NotSquareMatrixException;
 
 class DiagonalDifference {
     int diagonalDifference(int[][] a) throws NotSquareMatrixException {
-        if(a == null) {
+        if (a == null) {
             throw new NullPointerException();
         }
 
         int first = 0;
         int second = 0;
 
-        for(int i = 0; i < a.length; i++) {
-            if(a.length != a[i].length) {
+        for (int i = 0; i < a.length; i++) {
+            if (a.length != a[i].length) {
                 throw new NotSquareMatrixException();
             }
 

@@ -3,12 +3,10 @@ package tasks.leetcode.medium;
 import java.util.HashMap;
 import java.util.Map;
 
-public class IntegerToRoman
-{
+public class IntegerToRoman {
     private Map<Integer, Character> symbol = new HashMap<>();
     
-    public IntegerToRoman()
-    {
+    public IntegerToRoman() {
         this.symbol.put(1, 'I');
         this.symbol.put(5, 'V');
         this.symbol.put(10, 'X');
@@ -18,14 +16,18 @@ public class IntegerToRoman
         this.symbol.put(1000, 'M');
     }
     
-    public String intToRoman(int num)
-    {
+    public String intToRoman(int num) {
         StringBuilder ret = new StringBuilder();
         
-        for(int x : new int[]{1000, 100, 10, 1}) {
+        for (int x : new int[] {
+            1000,
+            100,
+            10,
+            1
+        }) {
             int value = num / x;
-    
-            switch(value) {
+
+            switch (value) {
                 case 0:
                     break;
                 case 1:
@@ -68,7 +70,7 @@ public class IntegerToRoman
                     break;
             }
             
-            if(0 < value && value < 10) {
+            if (0 < value && value < 10) {
                 num %= x;
             }
         }

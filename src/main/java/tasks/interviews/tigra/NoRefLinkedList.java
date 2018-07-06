@@ -3,21 +3,18 @@ package tasks.interviews.tigra;
 import java.util.ArrayList;
 import java.util.List;
 
-public class NoRefLinkedList implements IList
-{
+public class NoRefLinkedList implements IList {
     private List<IListNode> list = new ArrayList<>();
 
     @Override
-    public void add(String s)
-    {
+    public void add(String s) {
         list.add(new NoRefLinkedListNode(s));
     }
 
     @Override
-    public IListNode find(String s)
-    {
-        for(IListNode node : list) {
-            if(node.value().equals(s)) {
+    public IListNode find(String s) {
+        for (IListNode node : list) {
+            if (node.value().equals(s)) {
                 return node;
             }
         }
@@ -26,21 +23,19 @@ public class NoRefLinkedList implements IList
     }
 
     @Override
-    public void delete(IListNode node)
-    {
-        for(int i = 0; i < list.size(); i++) {
-            if(list.get(i) == node) {
+    public void delete(IListNode node) {
+        for (int i = 0; i < list.size(); i++) {
+            if (list.get(i) == node) {
                 list.remove(i);
             }
         }
     }
 
     @Override
-    public String[] all()
-    {
+    public String[] all() {
         String[] arr = new String[list.size()];
 
-        for(int i = 0; i < list.size(); i++) {
+        for (int i = 0; i < list.size(); i++) {
             arr[i] = list.get(i).value();
         }
 

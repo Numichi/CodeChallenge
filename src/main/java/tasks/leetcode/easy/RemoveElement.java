@@ -1,7 +1,10 @@
 package tasks.leetcode.easy;
 
 class RemoveElement {
-    int removeElement(int[] nums, int val) {
+    int removeElement(
+        int[] nums,
+        int val
+    ) {
         if (nums.length == 0 || nums.length == 1 && nums[0] == val) {
             return 0;
         }

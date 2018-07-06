@@ -16,16 +16,42 @@ public class PermMissingElemTestTest {
     @DataProvider(name = "default")
     public static Object[][] dataProvider() {
         return new Object[][] {
-            {new int[] {2, 3, 1, 5}, 4},
-            {new int[] {}, 1},
-            {new int[] {2}, 1},
-            {new int[] {1}, 2},
-            {new int[] {1, 2}, 3},
-        };
+            {
+                new int[] {
+                    2,
+                    3,
+                    1,
+                    5
+                },
+                4
+            },
+            {
+                new int[] {},
+                1
+            },
+            {
+                new int[] {2},
+                1
+            },
+            {
+                new int[] {1},
+                2
+            },
+            {
+                new int[] {
+                    1,
+                    2
+                },
+                3
+            },
+            };
     }
 
     @Test(dataProvider = "default")
-    public void testDefault(int[] arr, int expected) {
+    public void testDefault(
+        int[] arr,
+        int expected
+    ) {
         Assert.assertEquals(PermMissingElem.solution(arr), expected);
     }
 }

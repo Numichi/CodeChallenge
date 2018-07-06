@@ -12,12 +12,12 @@ import java.util.List;
 
 public class MergeTwoSortedListsTest {
     private MergeTwoSortedLists mergeTwoSortedLists;
-
+    
     @BeforeMethod
     public void setUpBeforeMethod() {
         mergeTwoSortedLists = new MergeTwoSortedLists();
     }
-
+    
     @DataProvider(name = "data-default")
     public Object[][] dataProvider() {
         return new Object[][] {
@@ -36,11 +36,15 @@ public class MergeTwoSortedListsTest {
                 NodeSupport.listFactory(1, 2, 4),
                 Arrays.asList(1, 2, 4, 5)
             },
-        };
+            };
     }
-
+    
     @Test(dataProvider = "data-default")
-    public void test(ListNode<Integer> p1, ListNode<Integer> p2, List<Integer> excepted) {
+    public void test(
+        ListNode<Integer> p1,
+        ListNode<Integer> p2,
+        List<Integer> excepted
+    ) {
         Assert.assertEquals(NodeSupport.toList(mergeTwoSortedLists.mergeTwoLists(p1, p2)), excepted);
     }
 }
