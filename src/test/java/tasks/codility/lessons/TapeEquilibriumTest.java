@@ -16,12 +16,24 @@ public class TapeEquilibriumTest {
     @DataProvider(name = "default")
     public static Object[][] dataProvider() {
         return new Object[][] {
-            {new int[]{3, 1, 2, 4, 3}, 1},
-        };
+            {
+                new int[] {
+                    3,
+                    1,
+                    2,
+                    4,
+                    3
+                },
+                1
+            },
+            };
     }
 
     @Test(dataProvider = "default")
-    public void testDefault(int[] arr, int expected) {
+    public void testDefault(
+        int[] arr,
+        int expected
+    ) {
         Assert.assertEquals(TapeEquilibrium.solution(arr), expected);
     }
 }

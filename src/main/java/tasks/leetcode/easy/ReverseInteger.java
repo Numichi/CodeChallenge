@@ -1,20 +1,18 @@
 package tasks.leetcode.easy;
 
-public class ReverseInteger
-{
-    public int reverse(int x)
-    {
+public class ReverseInteger {
+    public int reverse(int x) {
         boolean negative = false;
         boolean notFirst = false;
         long reverse = 0L;
 
-        if(x < 0) {
+        if (x < 0) {
             negative = true;
             x *= -1;
         }
 
-        while(0 < x) {
-            if(notFirst) {
+        while (0 < x) {
+            if (notFirst) {
                 reverse *= 10;
             } else {
                 notFirst = true;
@@ -24,7 +22,7 @@ public class ReverseInteger
             x /= 10;
         }
 
-        if(negative) {
+        if (negative) {
             reverse *= -1;
         }
 

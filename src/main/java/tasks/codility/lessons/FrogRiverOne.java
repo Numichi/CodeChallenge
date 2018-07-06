@@ -8,15 +8,18 @@ import java.util.Set;
  * O(N)
  */
 class FrogRiverOne {
-    int solution(int X, int[] A) {
+    int solution(
+        int X,
+        int[] A
+    ) {
         Set<Integer> set = new HashSet<>();
-        for(int i = 1; i <= X; i++) {
+        for (int i = 1; i <= X; i++) {
             set.add(i);
         }
-
-        for(int i = 0; i < A.length; i++) {
+        
+        for (int i = 0; i < A.length; i++) {
             set.remove(A[i]);
-            if(set.isEmpty()) {
+            if (set.isEmpty()) {
                 return i;
             }
         }

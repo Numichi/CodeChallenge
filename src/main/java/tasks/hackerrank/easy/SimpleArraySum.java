@@ -4,8 +4,8 @@ class SimpleArraySum {
     int simpleArraySum(int[] arr) {
         int result = 0;
 
-        if(arr != null) {
-            for(int i : arr) {
+        if (arr != null) {
+            for (int i : arr) {
                 result += i;
             }
         }

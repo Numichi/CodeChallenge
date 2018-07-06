@@ -21,7 +21,7 @@ public class StaircaseTest {
                 new String[] {
                     " #",
                     "##",
-                }
+                    }
             },
             {
                 4,
@@ -30,7 +30,7 @@ public class StaircaseTest {
                     "  ##",
                     " ###",
                     "####",
-                }
+                    }
             },
             {
                 6,
@@ -41,7 +41,7 @@ public class StaircaseTest {
                     "  ####",
                     " #####",
                     "######",
-                }
+                    }
             },
             {
                 10,
@@ -56,13 +56,16 @@ public class StaircaseTest {
                     "  ########",
                     " #########",
                     "##########",
-                }
+                    }
             }
         };
     }
 
     @Test(dataProvider = "data-default")
-    public void staircaseTest(int input, String[] excepted) {
+    public void staircaseTest(
+        int input,
+        String[] excepted
+    ) {
         Assert.assertEquals(staircase.staircase(input), excepted);
     }
 }

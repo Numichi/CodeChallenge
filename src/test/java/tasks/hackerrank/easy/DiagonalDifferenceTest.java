@@ -19,12 +19,25 @@ public class DiagonalDifferenceTest {
         return new Object[][] {
             {
                 new int[][] {
-                    { 11, 2, 4 },
-                    { 4, 5, 6 },
-                    { 10, 8, -12 }
-                }, 15
+                    {
+                        11,
+                        2,
+                        4
+                    },
+                    {
+                        4,
+                        5,
+                        6
+                    },
+                    {
+                        10,
+                        8,
+                        -12
+                    }
+                },
+                15
             },
-        };
+            };
     }
 
     @DataProvider(name = "data-NotSquareMatrixException")
@@ -32,41 +45,95 @@ public class DiagonalDifferenceTest {
         return new Object[][] {
             {
                 new int[][] {
-                    { 11, 2, 4 },
-                    { 4, 5, 6, 6 },
-                    { 10, 8, -12 }
-                }, 0
+                    {
+                        11,
+                        2,
+                        4
+                    },
+                    {
+                        4,
+                        5,
+                        6,
+                        6
+                    },
+                    {
+                        10,
+                        8,
+                        -12
+                    }
+                },
+                0
             },
             {
                 new int[][] {
-                    { 11, 2, 4 },
-                    { 4, 5, 6, 6 },
-                    { 10, 8, -12 },
-                    { 10, 8, -12 },
-                    { 10, 8, -12 },
-                    { 10, 8, -12 }
-                }, 0
+                    {
+                        11,
+                        2,
+                        4
+                    },
+                    {
+                        4,
+                        5,
+                        6,
+                        6
+                    },
+                    {
+                        10,
+                        8,
+                        -12
+                    },
+                    {
+                        10,
+                        8,
+                        -12
+                    },
+                    {
+                        10,
+                        8,
+                        -12
+                    },
+                    {
+                        10,
+                        8,
+                        -12
+                    }
+                },
+                0
             },
-        };
+            };
     }
 
     @DataProvider(name = "data-NullPointerException")
     public static Object[][] dataProviderWithNullPointerException() {
-        return new Object[][] { { null, 0 } };
+        return new Object[][] {
+            {
+                null,
+                0
+            }
+        };
     }
 
     @Test(dataProvider = "data-default")
-    public void diagonalDifferenceTest(int[][] matrix, int excepted) throws NotSquareMatrixException {
+    public void diagonalDifferenceTest(
+        int[][] matrix,
+        int excepted
+    ) throws NotSquareMatrixException {
         Assert.assertEquals(diagonalDifference.diagonalDifference(matrix), excepted);
     }
 
     @Test(dataProvider = "data-NotSquareMatrixException", expectedExceptions = NotSquareMatrixException.class)
-    public void diagonalDifferenceWithNotSquareMatrixExceptionTest(int[][] matrix, int excepted) throws NotSquareMatrixException {
+    public void diagonalDifferenceWithNotSquareMatrixExceptionTest(
+        int[][] matrix,
+        int excepted
+    ) throws NotSquareMatrixException {
         Assert.assertEquals(diagonalDifference.diagonalDifference(matrix), excepted);
     }
 
     @Test(dataProvider = "data-NullPointerException", expectedExceptions = NullPointerException.class)
-    public void diagonalDifferenceWithNullPointerExceptionTest(int[][] matrix, int excepted) throws NotSquareMatrixException {
+    public void diagonalDifferenceWithNullPointerExceptionTest(
+        int[][] matrix,
+        int excepted
+    ) throws NotSquareMatrixException {
         Assert.assertEquals(diagonalDifference.diagonalDifference(matrix), excepted);
     }
 }

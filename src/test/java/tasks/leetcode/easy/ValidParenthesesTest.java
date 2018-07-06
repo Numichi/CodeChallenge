@@ -16,13 +16,13 @@ public class ValidParenthesesTest {
     @DataProvider(name = "valid")
     public Object[][] dataProviderValid() {
         return new Object[][] {
-            { "()" },
-            { "[]" },
-            { "{}" },
-            { "({})" },
-            { "[({})]" },
-            { "{[()]()}" },
-        };
+            {"()"},
+            {"[]"},
+            {"{}"},
+            {"({})"},
+            {"[({})]"},
+            {"{[()]()}"},
+            };
     }
 
     @DataProvider(name = "invalid")
@@ -32,7 +32,7 @@ public class ValidParenthesesTest {
             {"[}"},
             {"[["},
             {"([)]"},
-        };
+            };
     }
 
     @Test(dataProvider = "valid")

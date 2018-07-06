@@ -13,9 +13,9 @@ class Zinc2018v1 {
         if (A.length < 3) {
             return 0;
         }
-
+        
         Set<Integer> result = new HashSet<>();
-
+        
         for (int i = 0; i < A.length - 2; i++) {
             for (int j = i + 1; j < A.length - 1; j++) {
                 for (int k = j + 1; k < A.length; k++) {
@@ -23,7 +23,7 @@ class Zinc2018v1 {
                 }
             }
         }
-
+        
         return result.size();
     }
 }

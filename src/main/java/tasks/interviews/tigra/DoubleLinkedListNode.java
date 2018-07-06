@@ -1,13 +1,14 @@
 package tasks.interviews.tigra;
 
-public class DoubleLinkedListNode extends AbstractListNode implements IListNode
-{
+public class DoubleLinkedListNode extends AbstractListNode implements IListNode {
     private DoubleLinkedListNode next;
     private DoubleLinkedListNode pre;
 
-    public DoubleLinkedListNode(String s, DoubleLinkedListNode pre)
-    {
-        if(pre != null) {
+    public DoubleLinkedListNode(
+        String s,
+        DoubleLinkedListNode pre
+    ) {
+        if (pre != null) {
             pre.setNext(this);
         }
 
@@ -15,23 +16,19 @@ public class DoubleLinkedListNode extends AbstractListNode implements IListNode
         value = s;
     }
 
-    public DoubleLinkedListNode getNext()
-    {
+    public DoubleLinkedListNode getNext() {
         return next;
     }
 
-    public void setNext(DoubleLinkedListNode next)
-    {
+    public void setNext(DoubleLinkedListNode next) {
         this.next = next;
     }
 
-    public DoubleLinkedListNode getPre()
-    {
+    public DoubleLinkedListNode getPre() {
         return pre;
     }
 
-    public void setPre(DoubleLinkedListNode pre)
-    {
+    public void setPre(DoubleLinkedListNode pre) {
         this.pre = pre;
     }
 }

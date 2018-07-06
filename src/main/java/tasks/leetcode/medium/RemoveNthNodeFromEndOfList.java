@@ -3,7 +3,10 @@ package tasks.leetcode.medium;
 import lib.node.ListNode;
 
 class RemoveNthNodeFromEndOfList {
-    ListNode<Integer> removeNthFromEnd(ListNode<Integer> head, int n) {
+    ListNode<Integer> removeNthFromEnd(
+        ListNode<Integer> head,
+        int n
+    ) {
         ListNode<Integer> result = new ListNode<>(0);
         ListNode<Integer> current = result;
         while (head != null) {
@@ -16,7 +19,10 @@ class RemoveNthNodeFromEndOfList {
         return result.getNext();
     }
 
-    private boolean found(ListNode<Integer> input, int n) {
+    private boolean found(
+        ListNode<Integer> input,
+        int n
+    ) {
         ListNode<Integer> current = input;
         try {
             for (int i = 0; i < n - 1; i++) {

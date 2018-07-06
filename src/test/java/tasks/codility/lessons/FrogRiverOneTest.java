@@ -16,13 +16,42 @@ public class FrogRiverOneTest {
     @DataProvider(name = "default")
     public static Object[][] dataProvider() {
         return new Object[][] {
-            {5, new int[]{1, 3, 1, 4, 2, 3, 5, 4}, 6},
-            {5, new int[]{1, 3, 1, 4, 2, 3, 4}, -1},
-        };
+            {
+                5,
+                new int[] {
+                    1,
+                    3,
+                    1,
+                    4,
+                    2,
+                    3,
+                    5,
+                    4
+                },
+                6
+            },
+            {
+                5,
+                new int[] {
+                    1,
+                    3,
+                    1,
+                    4,
+                    2,
+                    3,
+                    4
+                },
+                -1
+            },
+            };
     }
 
     @Test(dataProvider = "default")
-    public void testDefault(int pos, int[] arr, int expected) {
+    public void testDefault(
+        int pos,
+        int[] arr,
+        int expected
+    ) {
         Assert.assertEquals(FrogRiverOne.solution(pos, arr), expected);
     }
 }

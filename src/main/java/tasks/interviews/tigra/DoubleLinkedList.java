@@ -1,15 +1,13 @@
 package tasks.interviews.tigra;
 
-public class DoubleLinkedList implements IList
-{
+public class DoubleLinkedList implements IList {
     private DoubleLinkedListNode head = null;
     private DoubleLinkedListNode tail = null;
     private int count = 0;
 
     @Override
-    public void add(String s)
-    {
-        if(tail == null) {
+    public void add(String s) {
+        if (tail == null) {
             tail = new DoubleLinkedListNode(s, null);
             head = tail;
         } else {
@@ -20,8 +18,7 @@ public class DoubleLinkedList implements IList
     }
 
     @Override
-    public IListNode find(String i)
-    {
+    public IListNode find(String i) {
         IListNode ret = null;
         DoubleLinkedListNode h = head;
 
@@ -29,7 +26,7 @@ public class DoubleLinkedList implements IList
             h = h.getNext();
         }
 
-        if(h != null) {
+        if (h != null) {
             ret = h;
         }
 
@@ -37,22 +34,21 @@ public class DoubleLinkedList implements IList
     }
 
     @Override
-    public void delete(IListNode node)
-    {
-        if(node == null || head == null) {
+    public void delete(IListNode node) {
+        if (node == null || head == null) {
             return;
         }
 
-        if(head == node) {
+        if (head == node) {
             head = head.getNext();
-            if(head != null) {
+            if (head != null) {
                 head.setPre(null);
             } else {
                 tail = null;
             }
 
             count--;
-        } else if(tail == node) {
+        } else if (tail == node) {
             tail = tail.getPre();
             tail.setNext(null);
 
@@ -64,7 +60,7 @@ public class DoubleLinkedList implements IList
                 h = h.getNext();
             }
 
-            if(h != tail) {
+            if (h != tail) {
                 h.getPre().setNext(h.getNext());
                 h.getNext().setPre(h.getPre());
                 count--;
@@ -73,8 +69,7 @@ public class DoubleLinkedList implements IList
     }
 
     @Override
-    public String[] all()
-    {
+    public String[] all() {
         int i = 0;
         String[] arr = new String[count];
 

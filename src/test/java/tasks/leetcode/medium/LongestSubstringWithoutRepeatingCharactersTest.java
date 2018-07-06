@@ -16,14 +16,26 @@ public class LongestSubstringWithoutRepeatingCharactersTest {
     @DataProvider(name = "data-default")
     public Object[][] dataProvider() {
         return new Object[][] {
-            { "abcabcbb", 3 },
-            { "bbbbb", 1 },
-            { "pwwkew", 3 },
-        };
+            {
+                "abcabcbb",
+                3
+            },
+            {
+                "bbbbb",
+                1
+            },
+            {
+                "pwwkew",
+                3
+            },
+            };
     }
 
     @Test(dataProvider = "data-default")
-    public void test(String input, int excepted) {
+    public void test(
+        String input,
+        int excepted
+    ) {
         Assert.assertEquals(longestSubstringWithoutRepeatingCharacters.lengthOfLongestSubstring(input), excepted);
     }
 }

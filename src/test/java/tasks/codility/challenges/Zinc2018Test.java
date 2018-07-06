@@ -12,13 +12,64 @@ public class Zinc2018Test {
     @DataProvider(name = "data")
     public static Object[][] dataProvider() {
         return new Object[][] {
-            { new int[] { 1, 2, 1, 1 }, 3 },
-            { new int[] { 1, 2, 3, 4 }, 4 },
-            { new int[] { 2, 2, 2, 2 }, 1 },
-            { new int[] { 2, 2, 1, 2, 2 }, 4 },
-            { new int[] { 1, 2, 3, 4, 5, 6, 7, 8 }, 56 },
-            { new int[] { 1, 2 }, 0 },
-        };
+            {
+                new int[] {
+                    1,
+                    2,
+                    1,
+                    1
+                },
+                3
+            },
+            {
+                new int[] {
+                    1,
+                    2,
+                    3,
+                    4
+                },
+                4
+            },
+            {
+                new int[] {
+                    2,
+                    2,
+                    2,
+                    2
+                },
+                1
+            },
+            {
+                new int[] {
+                    2,
+                    2,
+                    1,
+                    2,
+                    2
+                },
+                4
+            },
+            {
+                new int[] {
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6,
+                    7,
+                    8
+                },
+                56
+            },
+            {
+                new int[] {
+                    1,
+                    2
+                },
+                0
+            },
+            };
     }
 
     @BeforeClass
@@ -28,12 +79,18 @@ public class Zinc2018Test {
     }
 
     @Test(dataProvider = "data")
-    public void testSolution1(int[] input, int excepted) {
+    public void testSolution1(
+        int[] input,
+        int excepted
+    ) {
         Assert.assertEquals(zinc2018v1.solution(input), excepted);
     }
 
     @Test(dataProvider = "data")
-    public void testSolution2(int[] input, int excepted) {
+    public void testSolution2(
+        int[] input,
+        int excepted
+    ) {
         // Assert.assertEquals(zinc2018v2.solution(input), excepted);
     }
 }
