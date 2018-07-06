@@ -14,7 +14,7 @@ class TapeEquilibrium {
             rightPath += a;
         }
 
-        for(int P = 1; P < A.length; P++) {
+        for (int P = 1; P < A.length; P++) {
             leftPath += A[P - 1];
             rightPath -= A[P - 1];
             int diff = Math.abs(leftPath - rightPath);

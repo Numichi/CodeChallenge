@@ -11,8 +11,8 @@ class OddOccurrencesInArray {
     int solution(int[] A) {
         Set<Integer> set = new LinkedHashSet<>();
 
-        for(int i : A) {
-            if(!set.contains(i)) {
+        for (int i : A) {
+            if (!set.contains(i)) {
                 set.add(i);
             } else {
                 set.remove(i);

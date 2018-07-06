@@ -16,18 +16,95 @@ public class TwoSumTest {
     @DataProvider(name = "data-default")
     public Object[][] dataProvider() {
         return new Object[][] {
-            { new int[] { 5, 5, 5 }, 10, new int[] { 0, 1 } },
-            { new int[] {}, 10, new int[] { -1, -1 } },
-            { new int[] { 0 }, 0, new int[] { -1, -1 } },
-            { new int[] { 1, 2, 3, 4 }, 1, new int[] { -1, -1 } },
-            { new int[] { 1, 2, 3, 4 }, 2, new int[] { -1, -1 } },
-            { new int[] { 1, 2, 3, 4 }, 3, new int[] { 0, 1 } },
-            { new int[] { 1, 2, 3, 4 }, 5, new int[] { 0, 3 } },
-        };
+            {
+                new int[] {
+                    5,
+                    5,
+                    5
+                },
+                10,
+                new int[] {
+                    0,
+                    1
+                }
+            },
+            {
+                new int[] {},
+                10,
+                new int[] {
+                    -1,
+                    -1
+                }
+            },
+            {
+                new int[] {0},
+                0,
+                new int[] {
+                    -1,
+                    -1
+                }
+            },
+            {
+                new int[] {
+                    1,
+                    2,
+                    3,
+                    4
+                },
+                1,
+                new int[] {
+                    -1,
+                    -1
+                }
+            },
+            {
+                new int[] {
+                    1,
+                    2,
+                    3,
+                    4
+                },
+                2,
+                new int[] {
+                    -1,
+                    -1
+                }
+            },
+            {
+                new int[] {
+                    1,
+                    2,
+                    3,
+                    4
+                },
+                3,
+                new int[] {
+                    0,
+                    1
+                }
+            },
+            {
+                new int[] {
+                    1,
+                    2,
+                    3,
+                    4
+                },
+                5,
+                new int[] {
+                    0,
+                    3
+                }
+            },
+            };
     }
 
     @Test(dataProvider = "data-default")
-    public void test(int[] array, int target, int[] excepted) {
+    public void test(
+        int[] array,
+        int target,
+        int[] excepted
+    ) {
         Assert.assertEquals(twoSum.twoSum(array, target), excepted);
     }
 }

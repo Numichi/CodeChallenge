@@ -16,14 +16,40 @@ public class CodilityTryTest {
     @DataProvider(name = "data")
     public static Object[][] dataProvider() {
         return new Object[][] {
-            { new int[] { -1, -3 }, 1 },
-            { new int[] { 1, 2, 3 }, 4 },
-            { new int[] { 1, 3, 6, 4, 1, 2 }, 5 },
-        };
+            {
+                new int[] {
+                    -1,
+                    -3
+                },
+                1
+            },
+            {
+                new int[] {
+                    1,
+                    2,
+                    3
+                },
+                4
+            },
+            {
+                new int[] {
+                    1,
+                    3,
+                    6,
+                    4,
+                    1,
+                    2
+                },
+                5
+            },
+            };
     }
 
     @Test(dataProvider = "data")
-    public void test(int[] input, int excepted) {
+    public void test(
+        int[] input,
+        int excepted
+    ) {
         Assert.assertEquals(codilityTry.solution(input), excepted);
     }
 }

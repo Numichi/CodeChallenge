@@ -16,12 +16,20 @@ public class FrogJmpTest {
     @DataProvider(name = "default")
     public static Object[][] dataProvider() {
         return new Object[][] {
-            {10, 85, 30},
-        };
+            {
+                10,
+                85,
+                30
+            },
+            };
     }
 
     @Test(dataProvider = "default")
-    public void testDefault(int from, int to, int range) {
+    public void testDefault(
+        int from,
+        int to,
+        int range
+    ) {
         Assert.assertEquals(FrogJmp.solution(from, to, range), 3);
     }
 }

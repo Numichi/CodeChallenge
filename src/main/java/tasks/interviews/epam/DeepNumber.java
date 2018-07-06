@@ -4,7 +4,7 @@ import lib.node.TreeNode;
 
 class DeepNumber {
     int getMaxDeep(TreeNode<Void> root) {
-        if(root == null) {
+        if (root == null) {
             return 0;
         }
 

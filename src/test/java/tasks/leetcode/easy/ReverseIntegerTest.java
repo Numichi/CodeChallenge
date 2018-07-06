@@ -16,17 +16,38 @@ public class ReverseIntegerTest {
     @DataProvider(name = "data-default")
     public Object[][] dataProvider() {
         return new Object[][] {
-            { 1111, 1111 },
-            { 1222, 2221 },
-            { -1222, -2221 },
-            { 123456, 654321 },
-            { -123456, -654321 },
-            { 1111111119, 0 },
-        };
+            {
+                1111,
+                1111
+            },
+            {
+                1222,
+                2221
+            },
+            {
+                -1222,
+                -2221
+            },
+            {
+                123456,
+                654321
+            },
+            {
+                -123456,
+                -654321
+            },
+            {
+                1111111119,
+                0
+            },
+            };
     }
 
     @Test(dataProvider = "data-default")
-    public void test(int p, int excepted) {
+    public void test(
+        int p,
+        int excepted
+    ) {
         Assert.assertEquals(reverseInteger.reverse(p), excepted);
     }
 }

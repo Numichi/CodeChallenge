@@ -9,13 +9,13 @@ import java.util.*;
 class MissingInteger {
     int solution(int[] A) {
         Set<Integer> collect = new HashSet<>();
-        for(int i = 1; i <= A.length; i++) {
+        for (int i = 1; i <= A.length; i++) {
             collect.add(i);
         }
-        for(int i : A) {
+        for (int i : A) {
             collect.remove(i);
         }
-        if(!collect.isEmpty()) {
+        if (!collect.isEmpty()) {
             return collect.iterator().next();
         }
         return A.length + 1;

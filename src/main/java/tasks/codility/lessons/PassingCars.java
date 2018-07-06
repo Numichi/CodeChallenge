@@ -10,12 +10,12 @@ public class PassingCars {
         int inc = 0;
         final double limit = Math.pow(10, 9);
 
-        for(int i : A) {
-            if(i == 0) {
+        for (int i : A) {
+            if (i == 0) {
                 inc++;
             } else {
                 result += inc;
-                if(limit < result || result < 0) {
+                if (limit < result || result < 0) {
                     return -1;
                 }
             }

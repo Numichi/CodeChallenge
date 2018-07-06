@@ -16,22 +16,58 @@ public class LongestPalindromicSubstringTest {
     @DataProvider(name = "data-default")
     public Object[][] dataProvider() {
         return new Object[][] {
-            { "bab", "bab" },
-            { "abbc", "bb" },
-            { "aa", "aa" },
-            { "aaa", "aaa" },
-            { "a", "a" },
-            { "abcda", "a" },
-            { "aaabaaaa", "aaabaaa" },
-            { "aaaaa", "aaaaa" },
-            { "aaaaaa", "aaaaaa" },
-            { "", "" },
-            { "tattarrattat", "tattarrattat" },
-        };
+            {
+                "bab",
+                "bab"
+            },
+            {
+                "abbc",
+                "bb"
+            },
+            {
+                "aa",
+                "aa"
+            },
+            {
+                "aaa",
+                "aaa"
+            },
+            {
+                "a",
+                "a"
+            },
+            {
+                "abcda",
+                "a"
+            },
+            {
+                "aaabaaaa",
+                "aaabaaa"
+            },
+            {
+                "aaaaa",
+                "aaaaa"
+            },
+            {
+                "aaaaaa",
+                "aaaaaa"
+            },
+            {
+                "",
+                ""
+            },
+            {
+                "tattarrattat",
+                "tattarrattat"
+            },
+            };
     }
 
     @Test(dataProvider = "data-default")
-    public void test(String input, String expected) {
+    public void test(
+        String input,
+        String expected
+    ) {
         Assert.assertEquals(longestPalindromicSubstring.longestPalindrome(input), expected);
     }
 }

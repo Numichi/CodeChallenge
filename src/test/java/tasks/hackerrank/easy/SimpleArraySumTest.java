@@ -16,15 +16,45 @@ public class SimpleArraySumTest {
     @DataProvider(name = "data-default")
     public static Object[][] dataProviderDefault() {
         return new Object[][] {
-            { null, 0 },
-            { new int[] {}, 0 },
-            { new int[] { 1, 2, 3, 4, 10, 11 }, 31 },
-            { new int[] { 1, 2, 3, 4, 10, 11, 12 }, 43 },
-        };
+            {
+                null,
+                0
+            },
+            {
+                new int[] {},
+                0
+            },
+            {
+                new int[] {
+                    1,
+                    2,
+                    3,
+                    4,
+                    10,
+                    11
+                },
+                31
+            },
+            {
+                new int[] {
+                    1,
+                    2,
+                    3,
+                    4,
+                    10,
+                    11,
+                    12
+                },
+                43
+            },
+            };
     }
 
     @Test(dataProvider = "data-default")
-    public void simpleArraySumTest(int[] input, int expected) {
+    public void simpleArraySumTest(
+        int[] input,
+        int expected
+    ) {
         Assert.assertEquals(simpleArraySum.simpleArraySum(input), expected);
     }
 }

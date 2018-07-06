@@ -1,7 +1,7 @@
 package tasks.leetcode.easy;
 
 class RemoveDuplicatesFromSortedArray {
-     int removeDuplicates(int[] nums) {
+    int removeDuplicates(int[] nums) {
         if (nums.length == 0) {
             return 0;
         }

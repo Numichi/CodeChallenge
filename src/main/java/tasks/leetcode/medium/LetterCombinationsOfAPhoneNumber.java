@@ -2,12 +2,10 @@ package tasks.leetcode.medium;
 
 import java.util.*;
 
-public class LetterCombinationsOfAPhoneNumber
-{
+public class LetterCombinationsOfAPhoneNumber {
     private Map<Integer, List<Character>> keyboard = new HashMap<>();
     
-    public LetterCombinationsOfAPhoneNumber()
-    {
+    public LetterCombinationsOfAPhoneNumber() {
         keyboard.put(2, new ArrayList<>(Arrays.asList('a', 'b', 'c')));
         keyboard.put(3, new ArrayList<>(Arrays.asList('d', 'e', 'f')));
         keyboard.put(4, new ArrayList<>(Arrays.asList('h', 'g', 'i')));
@@ -23,19 +21,19 @@ public class LetterCombinationsOfAPhoneNumber
         List<String> result = new ArrayList<>();
         
         // Input is empty
-        if(digits.length() == 0) {
+        if (digits.length() == 0) {
             return result;
         }
         
         
         result.add("");
         
-        for(char c : digits.toCharArray()) {
+        for (char c : digits.toCharArray()) {
             int i = Character.getNumericValue(c);
             List<String> temp = new ArrayList<>();
             
-            for(String x : result) {
-                for(char c1 : keyboard.get(i)) {
+            for (String x : result) {
+                for (char c1 : keyboard.get(i)) {
                     temp.add(x + c1);
                 }
             }
