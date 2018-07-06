@@ -9,17 +9,17 @@ public class Assistant extends AbstractPerson {
     ) {
         super(name, birthYear);
     }
-
+    
     @Override
     public boolean isAssistant() {
         return true;
     }
-
+    
     @Override
     public void setName(String name) {
         super.setName(name == null || name.isEmpty() ? "Assistant" : name);
     }
-
+    
     @Override
     public boolean equals(Object o) {
         if (this == o) {
@@ -32,7 +32,7 @@ public class Assistant extends AbstractPerson {
         return getBirthYear() == assistant.getBirthYear()
             && getName().equals(assistant.getName());
     }
-
+    
     @Override
     public int hashCode() {
         return Objects.hash(getBirthYear(), getName());

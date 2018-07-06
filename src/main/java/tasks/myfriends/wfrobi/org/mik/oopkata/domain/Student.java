@@ -4,7 +4,7 @@ import java.util.Objects;
 
 public class Student extends AbstractPerson {
     private Specialization specialization;
-
+    
     public Student(
         String name,
         int birthYear,
@@ -13,22 +13,22 @@ public class Student extends AbstractPerson {
         super(name, birthYear);
         this.specialization = specialization;
     }
-
+    
     @Override
     public Specialization getSpecialization() {
         return specialization;
     }
-
+    
     @Override
     public boolean isStudent() {
         return true;
     }
-
+    
     @Override
     public void setName(String name) {
         super.setName(name == null || name.isEmpty() ? "Student" : name);
     }
-
+    
     @Override
     public boolean equals(Object o) {
         if (this == o) {
@@ -42,7 +42,7 @@ public class Student extends AbstractPerson {
             && getBirthYear() == student.getBirthYear()
             && getName().equals(student.getName());
     }
-
+    
     @Override
     public int hashCode() {
         return Objects.hash(getSpecialization(), getBirthYear(), getName());
