@@ -15,13 +15,27 @@ public class MinAvgTwoSliceTest {
 
     @DataProvider(name = "default")
     public static Object[][] dataProvider() {
-        return new Object[][]{
-            {new int[] {4, 2, 2, 5, 1, 5, 8}, 1}
+        return new Object[][] {
+            {
+                new int[] {
+                    4,
+                    2,
+                    2,
+                    5,
+                    1,
+                    5,
+                    8
+                },
+                1
+            }
         };
     }
 
     @Test(dataProvider = "default")
-    public void testDefault(int[] arr, int expected) {
+    public void testDefault(
+        int[] arr,
+        int expected
+    ) {
         Assert.assertEquals(MinAvgTwoSlice.solution(arr), expected);
     }
 }
