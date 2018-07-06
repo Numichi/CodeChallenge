@@ -9,16 +9,16 @@ import java.util.Arrays;
 class PermMissingElem {
     int solution(int[] A) {
         Arrays.sort(A);
-
+        
         int i = 1;
-
+        
         while (i <= A.length) {
             if (A[i - 1] != i) {
                 break;
             }
             i++;
         }
-
+        
         return i;
     }
 }

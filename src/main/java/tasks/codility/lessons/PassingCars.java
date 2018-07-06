@@ -9,7 +9,7 @@ public class PassingCars {
         int result = 0;
         int inc = 0;
         final double limit = Math.pow(10, 9);
-
+        
         for (int i : A) {
             if (i == 0) {
                 inc++;
@@ -20,7 +20,7 @@ public class PassingCars {
                 }
             }
         }
-
+        
         return result;
     }
 }

@@ -7,12 +7,12 @@ import org.testng.annotations.Test;
 
 public class CodilityTryTest {
     private CodilityTry codilityTry;
-
+    
     @BeforeClass
     public void setUpBeforeClass() {
         codilityTry = new CodilityTry();
     }
-
+    
     @DataProvider(name = "data")
     public static Object[][] dataProvider() {
         return new Object[][] {
@@ -44,7 +44,7 @@ public class CodilityTryTest {
             },
             };
     }
-
+    
     @Test(dataProvider = "data")
     public void test(
         int[] input,

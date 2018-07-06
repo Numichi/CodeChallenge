@@ -12,7 +12,7 @@ class MaxCounters {
         final int result[] = new int[N];
         int max = 0;
         int save = 0;
-
+        
         for (int a : A) {
             if (a == N + 1) {
                 save = max;
@@ -28,13 +28,13 @@ class MaxCounters {
                 }
             }
         }
-
+        
         for (int i = 0; i < result.length; i++) {
             if (result[i] < save) {
                 result[i] = save;
             }
         }
-
+        
         return result;
     }
 }

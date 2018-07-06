@@ -7,12 +7,12 @@ import org.testng.annotations.Test;
 
 public class PermCheckTest {
     private PermCheck PermCheck;
-
+    
     @BeforeClass
     public void setUpBeforeClass() {
         PermCheck = new PermCheck();
     }
-
+    
     @DataProvider(name = "default")
     public static Object[][] dataProvider() {
         return new Object[][] {
@@ -54,7 +54,7 @@ public class PermCheckTest {
             // ?
         };
     }
-
+    
     @Test(dataProvider = "default")
     public void testDefault(
         int[] perm,

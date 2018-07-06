@@ -13,7 +13,7 @@ class FrogJmp {
         if (X == Y) {
             return 0;
         }
-
+        
         return (int) Math.ceil((Y - X) / (double) D);
     }
 }

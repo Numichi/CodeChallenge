@@ -504,11 +504,11 @@ public class TestKata extends AbstractTest {
         for (int i = 0; i < TEACHER_NAMES.length; ++i) {
             university.addTeacher(new Teacher(TEACHER_NAMES[i], TEACHER_YEARS[i], TEACHER_INSTITUTES[i]));
         }
-    
+        
         for (int i = 0; i < STUDENT_NAMES.length; ++i) {
             university.addStudent(new Student(STUDENT_NAMES[i], STUDENT_YEARS[i], STUDENT_SPECIALIZATIONS[i]));
         }
-    
+        
         for (int i = 0; i < ASSISTANT_NAMES.length; ++i) {
             university.addAssistant(new Assistant(ASSISTANT_NAMES[i], ASSISTANT_YEARS[i]));
         }

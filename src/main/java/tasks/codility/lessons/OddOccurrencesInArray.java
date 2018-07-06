@@ -10,7 +10,7 @@ import java.util.Set;
 class OddOccurrencesInArray {
     int solution(int[] A) {
         Set<Integer> set = new LinkedHashSet<>();
-
+        
         for (int i : A) {
             if (!set.contains(i)) {
                 set.add(i);
@@ -18,7 +18,7 @@ class OddOccurrencesInArray {
                 set.remove(i);
             }
         }
-
+        
         return set.iterator().next();
     }
 }
