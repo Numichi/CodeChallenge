@@ -1,4 +1,4 @@
-package tasks.hackerrank.easy;
+package tasks.hackerrank.problemSolving.easy;
 
 class AVeryBigSum {
     long aVeryBigSum(long[] ar) {

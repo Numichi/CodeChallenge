@@ -1,4 +1,4 @@
-package tasks.hackerrank.easy;
+package tasks.hackerrank.problemSolving.easy;
 
 class PlusMinus {
     double[] plusMinus(int[] arr) {

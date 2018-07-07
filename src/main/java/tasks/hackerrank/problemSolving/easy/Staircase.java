@@ -1,4 +1,4 @@
-package tasks.hackerrank.easy;
+package tasks.hackerrank.problemSolving.easy;
 
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;

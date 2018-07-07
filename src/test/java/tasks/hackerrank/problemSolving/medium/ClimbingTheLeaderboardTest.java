@@ -1,4 +1,4 @@
-package tasks.hackerrank.medium;
+package tasks.hackerrank.problemSolving.medium;
 
 import org.testng.Assert;
 import org.testng.annotations.BeforeTest;

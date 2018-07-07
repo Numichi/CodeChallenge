@@ -1,4 +1,4 @@
-package tasks.hackerrank.easy;
+package tasks.hackerrank.problemSolving.easy;
 
 import exception.NotSquareMatrixException;
 import org.testng.Assert;

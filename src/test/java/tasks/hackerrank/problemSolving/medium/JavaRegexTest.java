@@ -1,4 +1,4 @@
-package tasks.hackerrank.medium;
+package tasks.hackerrank.problemSolving.medium;
 
 import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
@@ -104,6 +104,7 @@ public class JavaRegexTest {
     public void init() {
         javaRegex = new JavaRegex();
     }
+    
     @Test(dataProvider = "default")
     public void test(
         String str,

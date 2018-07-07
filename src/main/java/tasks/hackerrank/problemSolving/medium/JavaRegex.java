@@ -1,4 +1,4 @@
-package tasks.hackerrank.medium;
+package tasks.hackerrank.problemSolving.medium;
 
 class JavaRegex {
     String pattern;

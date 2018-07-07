@@ -1,4 +1,4 @@
-package tasks.hackerrank.easy;
+package tasks.hackerrank.problemSolving.easy;
 
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
